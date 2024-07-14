@@ -5,7 +5,11 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson1", "Lesson1", "{74B0508D-F97E-44B6-A4F1-04AEE959E779}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "Lesson1\HelloWorld\HelloWorld.csproj", "{F2C41459-62EC-4705-87C9-2A5DABCE84D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "Lesson1\HelloWorld\HelloWorld.csproj", "{F2C41459-62EC-4705-87C9-2A5DABCE84D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson2", "Lesson2", "{9E037A03-A15B-4F57-9712-DB9E16562A12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariableDataType", "Lesson2\VariableDataType\VariableDataType.csproj", "{43E20311-CBED-439D-9C38-1768DF50B602}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,12 +21,17 @@ Global
 		{F2C41459-62EC-4705-87C9-2A5DABCE84D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2C41459-62EC-4705-87C9-2A5DABCE84D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2C41459-62EC-4705-87C9-2A5DABCE84D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E20311-CBED-439D-9C38-1768DF50B602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E20311-CBED-439D-9C38-1768DF50B602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E20311-CBED-439D-9C38-1768DF50B602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E20311-CBED-439D-9C38-1768DF50B602}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F2C41459-62EC-4705-87C9-2A5DABCE84D9} = {74B0508D-F97E-44B6-A4F1-04AEE959E779}
+		{43E20311-CBED-439D-9C38-1768DF50B602} = {9E037A03-A15B-4F57-9712-DB9E16562A12}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8AE9743-16E7-480F-819E-3A1374F4CBA5}
