@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "Lesson1\Hello
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson3", "Lesson3", "{5E0893F6-7138-4843-BAD9-58A77A28B224}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnIfElseCondition", "Lesson3\LearnIfElseCondition\LearnIfElseCondition.csproj", "{B922719F-4F71-466A-84B1-44F0A107B2DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnIfElseCondition", "Lesson3\LearnIfElseCondition\LearnIfElseCondition.csproj", "{B922719F-4F71-466A-84B1-44F0A107B2DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
