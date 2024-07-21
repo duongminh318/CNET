@@ -11,7 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson3", "Lesson3", "{5E08
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnIfElseCondition", "Lesson3\LearnIfElseCondition\LearnIfElseCondition.csproj", "{B922719F-4F71-466A-84B1-44F0A107B2DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Check_Triangle_Homework", "Lesson3\Check_Triangle_Homework\Check_Triangle_Homework.csproj", "{3BBE81A7-D906-4535-ADD0-3D7A5B25935C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Check_Triangle_Homework", "Lesson3\Check_Triangle_Homework\Check_Triangle_Homework.csproj", "{3BBE81A7-D906-4535-ADD0-3D7A5B25935C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson4", "Lesson4", "{8609CE81-53E1-487D-AA15-E67D9686125B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnSwitchCase", "Lesson4\LearnSwitchCase\LearnSwitchCase.csproj", "{0F59DABE-EC5E-4DDD-A8FF-5042CD2EAEEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{3BBE81A7-D906-4535-ADD0-3D7A5B25935C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BBE81A7-D906-4535-ADD0-3D7A5B25935C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BBE81A7-D906-4535-ADD0-3D7A5B25935C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F59DABE-EC5E-4DDD-A8FF-5042CD2EAEEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F59DABE-EC5E-4DDD-A8FF-5042CD2EAEEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F59DABE-EC5E-4DDD-A8FF-5042CD2EAEEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F59DABE-EC5E-4DDD-A8FF-5042CD2EAEEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +47,7 @@ Global
 		{F2C41459-62EC-4705-87C9-2A5DABCE84D9} = {74B0508D-F97E-44B6-A4F1-04AEE959E779}
 		{B922719F-4F71-466A-84B1-44F0A107B2DF} = {5E0893F6-7138-4843-BAD9-58A77A28B224}
 		{3BBE81A7-D906-4535-ADD0-3D7A5B25935C} = {5E0893F6-7138-4843-BAD9-58A77A28B224}
+		{0F59DABE-EC5E-4DDD-A8FF-5042CD2EAEEF} = {8609CE81-53E1-487D-AA15-E67D9686125B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8AE9743-16E7-480F-819E-3A1374F4CBA5}
