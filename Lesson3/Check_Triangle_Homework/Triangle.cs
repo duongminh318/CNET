@@ -116,62 +116,99 @@ namespace Check_Triangle_Homework
             }
         }
 
+
+
         // Function to run the triangle checking process, handles user input and output
-        public static void RunCheckTriangle()
+        /* public  void RunCheckTriangle()
+         {
+             // Prompt user to input lengths of sides
+             Console.WriteLine("Enter the lengths of three sides of the triangle:");
+             double a, b, c;
+             bool validInput = false;
+
+             // Input validation loop for side a
+             do
+             {
+                 Console.Write("Side a: ");
+                 if (!double.TryParse(Console.ReadLine(), out a) || a <= 0)
+                 {
+                     // Prompt user to enter a positive length if input is invalid
+                     Console.WriteLine("Please enter a positive length.");
+                 }
+                 else
+                 {
+                     validInput = true; // Set flag to true to exit loop
+                 }
+             } while (!validInput); // Continue loop until valid input is received
+
+             validInput = false; // Reset flag for next input
+
+             // Input validation loop for side b
+             do
+             {
+                 Console.Write("Side b: ");
+                 if (!double.TryParse(Console.ReadLine(), out b) || b <= 0)
+                 {
+                     // Prompt user to enter a positive length if input is invalid
+                     Console.WriteLine("Please enter a positive length.");
+                 }
+                 else
+                 {
+                     validInput = true; // Set flag to true to exit loop
+                 }
+             } while (!validInput); // Continue loop until valid input is received
+
+             validInput = false; // Reset flag for next input
+
+             // Input validation loop for side c
+             do
+             {
+                 Console.Write("Side c: ");
+                 if (!double.TryParse(Console.ReadLine(), out c) || c <= 0)
+                 {
+                     // Prompt user to enter a positive length if input is invalid
+                     Console.WriteLine("Please enter a positive length.");
+                 }
+                 else
+                 {
+                     validInput = true; // Set flag to true to exit loop
+                 }
+             } while (!validInput); // Continue loop until valid input is received
+
+             // Call CheckTriangle function with user input sides and store the result
+             string result = CheckTriangle(a, b, c);
+
+             // Output the result of triangle check to the console
+             Console.WriteLine(result);
+         }*/
+
+        //cách 2 GetSide là 1 hàm riêng
+
+        public  double GetSide(string sideName)
+        {
+            double side;
+            bool validInput;
+            do
+            {
+                Console.Write($"{sideName}: ");
+                validInput = double.TryParse(Console.ReadLine(), out side) && side > 0;
+                if (!validInput)
+                {
+                    Console.WriteLine($"Please enter {sideName} positive length.");
+                }
+            } while (!validInput);
+
+            return side;
+        }
+        public  void RunCheckTriangle()
         {
             // Prompt user to input lengths of sides
             Console.WriteLine("Enter the lengths of three sides of the triangle:");
-            double a, b, c;
-            bool validInput = false;
 
-            // Input validation loop for side a
-            do
-            {
-                Console.Write("Side a: ");
-                if (!double.TryParse(Console.ReadLine(), out a) || a <= 0)
-                {
-                    // Prompt user to enter a positive length if input is invalid
-                    Console.WriteLine("Please enter a positive length.");
-                }
-                else
-                {
-                    validInput = true; // Set flag to true to exit loop
-                }
-            } while (!validInput); // Continue loop until valid input is received
-
-            validInput = false; // Reset flag for next input
-
-            // Input validation loop for side b
-            do
-            {
-                Console.Write("Side b: ");
-                if (!double.TryParse(Console.ReadLine(), out b) || b <= 0)
-                {
-                    // Prompt user to enter a positive length if input is invalid
-                    Console.WriteLine("Please enter a positive length.");
-                }
-                else
-                {
-                    validInput = true; // Set flag to true to exit loop
-                }
-            } while (!validInput); // Continue loop until valid input is received
-
-            validInput = false; // Reset flag for next input
-
-            // Input validation loop for side c
-            do
-            {
-                Console.Write("Side c: ");
-                if (!double.TryParse(Console.ReadLine(), out c) || c <= 0)
-                {
-                    // Prompt user to enter a positive length if input is invalid
-                    Console.WriteLine("Please enter a positive length.");
-                }
-                else
-                {
-                    validInput = true; // Set flag to true to exit loop
-                }
-            } while (!validInput); // Continue loop until valid input is received
+            // Get valid inputs for sides
+            double a = GetSide("Side a");
+            double b = GetSide("Side b");
+            double c = GetSide("Side c");
 
             // Call CheckTriangle function with user input sides and store the result
             string result = CheckTriangle(a, b, c);
@@ -179,5 +216,11 @@ namespace Check_Triangle_Homework
             // Output the result of triangle check to the console
             Console.WriteLine(result);
         }
+
+    
+
+       
+       
+
     }
 }
