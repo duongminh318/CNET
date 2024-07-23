@@ -10,7 +10,8 @@ namespace LearnSwitchCase
     {
         /*
          * trả ra mesage tương ứng với lỗi
-         * 401 => una
+         * sử dụng switch case cho tường trường hợp
+         * sử dụng enum để lưu list các lỗi định nghĩa trước
          */
         public string ShowMessage(int statusCode)
         {
@@ -21,7 +22,7 @@ namespace LearnSwitchCase
                     message = CommonConstants.UnAuthoried;
                     break;
                 case 200:
-                    message = CommonConstants.Ok;
+                    message = CommonConstants.OK;
                     break;
                 case 404:
                     message = CommonConstants.NotFound;
@@ -39,10 +40,6 @@ namespace LearnSwitchCase
 
         /*// Viết hàm nhận vào Month(int) và Year(int) và 
          * trả ra số ngày trong tháng (có xét đến năm nhuận)*/
-
-
-
-
         // Hàm GetDaysInMonth để tính số ngày trong tháng (như đã viết trước đó)
         public int GetDaysInMonth(int month, int year)
         {
@@ -77,8 +74,38 @@ namespace LearnSwitchCase
             }
         }
 
+        public void RunGetDaysInMonth()
+        {
+            // Nhập liệu từ người dùng
+            Console.WriteLine("Enter the month (1-12): ");
+            int month;
+            while (!int.TryParse(Console.ReadLine(), out month) || month < 1 || month > 12)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid month (1-12): ");
+            }
+
+            Console.WriteLine("Enter the year: ");
+            int year;
+            while (!int.TryParse(Console.ReadLine(), out year) || year < 1)
+            {
+                Console.WriteLine("Invalid input. Please enter a valid year: ");
+            }
+
+            try
+            {
+                // Gọi hàm GetDaysInMonth để lấy số ngày trong tháng
+                int days = GetDaysInMonth(month, year);
+                Console.WriteLine($"Number of days in month {month} of year {year}: {days}");
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
         //cách 2 sử dụng enum
-        public  int GetDaysInMonth2(Month month, int year)
+        public int GetDaysInMonthEnum(Month month, int year)
         {
 /*
             if (Month < 1 || month > 12)
@@ -112,7 +139,7 @@ namespace LearnSwitchCase
             }
         }
 
-        public  void RunGetDaysInMonth2()
+        public  void RunGetDaysInMonthEnum()
         {
             // Nhập liệu từ người dùng
             Console.WriteLine("Enter the month (1-12): ");
@@ -134,7 +161,7 @@ namespace LearnSwitchCase
             try
             {
                 // Gọi hàm GetDaysInMonth để lấy số ngày trong tháng
-                int days = GetDaysInMonth2(month, year);
+                int days = GetDaysInMonthEnum(month, year);
                 Console.WriteLine($"Number of days in {month} of year {year}: {days}");
             }
             catch (ArgumentOutOfRangeException ex)
@@ -144,35 +171,7 @@ namespace LearnSwitchCase
         }
 
     
-        public void RunGetDaysInMonth()
-        {
-            // Nhập liệu từ người dùng
-            Console.WriteLine("Enter the month (1-12): ");
-            int month;
-            while (!int.TryParse(Console.ReadLine(), out month) || month < 1 || month > 12)
-            {
-                Console.WriteLine("Invalid input. Please enter a valid month (1-12): ");
-            }
-
-            Console.WriteLine("Enter the year: ");
-            int year;
-            while (!int.TryParse(Console.ReadLine(), out year) || year < 1)
-            {
-                Console.WriteLine("Invalid input. Please enter a valid year: ");
-            }
-
-            try
-            {
-                // Gọi hàm GetDaysInMonth để lấy số ngày trong tháng
-                int days = GetDaysInMonth(month, year);
-                Console.WriteLine($"Number of days in month {month} of year {year}: {days}");
-            }
-            catch (ArgumentOutOfRangeException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-        }
-
+       
 
     }
 }
