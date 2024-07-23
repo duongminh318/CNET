@@ -45,7 +45,8 @@ namespace LearnSwitchCase
         {
             if (month < 1 || month > 12)
             {
-                throw new ArgumentOutOfRangeException("month", "Month must be between 1 and 12.");
+                //throw new ArgumentOutOfRangeException("month", "Month must be between 1 and 12.");
+                throw new ArgumentOutOfRangeException(string.Format(CommonConstants.ErrorMessages.OutOfRangeMessage, month, Month.January.ToString(), Month.December.ToString()));
             }
 
             // Kiểm tra xem năm có phải là năm nhuận hay không
@@ -81,14 +82,17 @@ namespace LearnSwitchCase
             int month;
             while (!int.TryParse(Console.ReadLine(), out month) || month < 1 || month > 12)
             {
-                Console.WriteLine("Invalid input. Please enter a valid month (1-12): ");
+                // Console.WriteLine("Invalid input. Please enter a valid month (1-12): ");
+                //sử dụng thông điệp lỗi khai báo trong list bên enum CommonConstants
+                 Console.WriteLine( string.Format(CommonConstants.ErrorMessages.OutOfRangeMessage, month, Month.January.ToString(), Month.December.ToString()));
             }
 
             Console.WriteLine("Enter the year: ");
             int year;
             while (!int.TryParse(Console.ReadLine(), out year) || year < 1)
             {
-                Console.WriteLine("Invalid input. Please enter a valid year: ");
+                // Console.WriteLine("Invalid input. Please enter a valid year: ");
+                Console.WriteLine(string.Format(CommonConstants.ErrorMessages.YearNotCorrect, year));
             }
 
             try
@@ -96,6 +100,7 @@ namespace LearnSwitchCase
                 // Gọi hàm GetDaysInMonth để lấy số ngày trong tháng
                 int days = GetDaysInMonth(month, year);
                 Console.WriteLine($"Number of days in month {month} of year {year}: {days}");
+               
             }
             catch (ArgumentOutOfRangeException ex)
             {
@@ -107,8 +112,8 @@ namespace LearnSwitchCase
         //cách 2 sử dụng enum
         public int GetDaysInMonthEnum(Month month, int year)
         {
-/*
-            if (Month < 1 || month > 12)
+            //enum là 1 list nên phải duyệt qua từng phần tử
+           /* if (Month < 1 || month > 12)
             {
                 throw new ArgumentOutOfRangeException("month", "Month must be between 1 and 12.");
             }*/
@@ -148,7 +153,7 @@ namespace LearnSwitchCase
             {
                 Console.WriteLine("Invalid input. Please enter a valid month (1-12): ");
             }
-            //ép kiểu về enum Month
+            //ép kiểu về enum Month cho giá trị người dùng mới nhập vào
             Month month = (Month)monthInput;
 
             Console.WriteLine("Enter the year: ");

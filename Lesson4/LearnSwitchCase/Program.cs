@@ -2,9 +2,11 @@
 
 var dm1 = new Demo();
 //dm1.ShowMessage(200);
-//dm1.RunGetDaysInMonth();
-dm1.RunGetDaysInMonth2();
+dm1.RunGetDaysInMonth();
+//dm1.RunGetDaysInMonthEnum();
 
-var values =(int)Month.January;
-var values2 =Month.January;
+// enum(key(int), value(string))
+var values =(int)Month.January; // int
+var values2 =Month.January; // string
+
 Console.ReadKey();

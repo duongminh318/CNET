@@ -15,9 +15,11 @@ namespace LearnSwitchCase
         public const string Undefined = "Undefined";
         public const double PI = 3.14;
 
+        //Chứa thông điệp lỗi định dạng.
         public static class ErrorMessages
         {
             public const string OutOfRangeMessage = "Value {0} is out of {1} - {2}";
+            public const string YearNotCorrect = "Value {0} Not Correct";
             public const string ValueIsNotValid = "Value {0} is not valid";
         }
 
