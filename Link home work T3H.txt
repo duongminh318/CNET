@@ -1,0 +1,10 @@
+link home work c# .NET T3H
+Duong Khoi Minh
+
+main Repository: https://github.com/duongminh318/CNET
+
+lesson3: https://github.com/duongminh318/CNET/tree/master/Lesson3/Check_Triangle_Homework
+
+Lesson 4: https://github.com/duongminh318/CNET/tree/master/Lesson4/Home_Work_Lesson4
+
+Lesson 5: https://github.com/duongminh318/CNET/tree/master/Lesson5/Home_Work_Lesson5
