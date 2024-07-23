@@ -27,10 +27,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Home_Work_Lesson5", "Lesson5\Home_Work_Lesson5\Home_Work_Lesson5.csproj", "{C5F4509E-CA8C-49BE-A21E-F8A0C424DB88}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. collection_exercises", "1. collection_exercises", "{811BDEDF-9CA3-4867-94D7-B61BBF464009}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{CC4C8DB1-7F6A-4021-9D19-BA9E519A892C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,7 +74,6 @@ Global
 		{052E7A42-FDF9-4735-8E23-86EB4AC9310A} = {8609CE81-53E1-487D-AA15-E67D9686125B}
 		{E63B5A8E-9F2A-457F-857F-B115618BD229} = {5782406A-AF90-487F-B220-73E785B27960}
 		{C5F4509E-CA8C-49BE-A21E-F8A0C424DB88} = {E63B5A8E-9F2A-457F-857F-B115618BD229}
-		{CC4C8DB1-7F6A-4021-9D19-BA9E519A892C} = {811BDEDF-9CA3-4867-94D7-B61BBF464009}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8AE9743-16E7-480F-819E-3A1374F4CBA5}
