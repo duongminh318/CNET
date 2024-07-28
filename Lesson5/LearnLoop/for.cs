@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnLoop
 {
-    public class Demo
+    public class @for
     {
         public void PrintOddNumbers(int limit)
         {
