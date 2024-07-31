@@ -6,16 +6,21 @@
 
 # 2. Function in C#
 
-# 3. Condition (IF ELSE)
+# 3. Condition (IF - ELSE)
 
 # 4. Swith Case & Use Enum 
 
 # 5. LOOP
->> for
+>> for (star; end ; step){ code..}
+- cách hoạt động: lặp từ start tới xát end, theo từng step
+- dùng khi biết trước được số lần cần lặp, và khi nào cần dừng
+- 
 
->> while
 
->> do while
+>> while(điều kiện lặp){ code lặp}
+
+>> do
+while
 
 # 6. Array and List
 >> array: mảng
