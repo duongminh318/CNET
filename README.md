@@ -61,15 +61,26 @@
 
 
 # 6. ARRAY & LIST
->> array: 
+>> ARRAY: 
 - mảng chứa tập hợp các giá trị có cùng kiểu dữ liệu
 >> cú pháp:
-- cách 1: datatype[] nameArray = { value1, value2,...} --> chứa giá trị khởi tạo ban đầu
-- cách2 : datatype[] nameArray = new datatype[length] --> mảng rỗng, biết độ dài
+- cách 1: datatype[] nameArray = { value1, value2,...}
+ - --> chứa giá trị khởi tạo ban đầu
+- cách2 : datatype[] nameArray = new datatype[length] 
+ - --> mảng rỗng, biết độ dài
     - datatype: kiểu dữ liệu
     - nameArray: tên mảng
     - value..: các element của mảng
     - length: độ dài mảng
->>VD:  int[] numbers = new int[length]
-- khác với js, c# Có kích thước cố định sau khi tạo,
->> list: danh sách
+>> VD:  int[] numbers = new int[length]
+--> khác với js, c# Có kích thước cố định sau khi tạo,
+>> LIST:
+- danh sách: giống array nhưng có thể thay đổi độ dài
+-  List<T> Kích thước có thể thay đổi, 
+- nhưng kiểu dữ liệu của phần tử không thể thay đổi.
+>> syntax
+- List<int> numbers = new List<int>(); // Khởi tạo danh sách rỗng
+ // Khởi tạo danh sách với các phần tử
+- List<string> fruits = new List<string> { "Apple", "Banana" }; 
+- cách hoạt động các hàm có phần giống string và array
+
