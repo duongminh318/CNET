@@ -48,13 +48,13 @@ namespace LearnListLinQ
 
 				// Nhập một từ tiếng Anh từ người dùng
 				Console.Write("Enter an English word:: ");
-				string englishWord = Console.ReadLine().Trim().ToLower();
+				string strEnglishWord = Console.ReadLine().Trim().ToLower();
 
 				// Tìm từ tiếng Việt tương ứng
-				int index = englishWords.IndexOf(englishWord); // nếu thấy sẽ trả về index
+				int index = englishWords.IndexOf(strEnglishWord); // nếu thấy sẽ trả về index
 				if (index != -1)    //ko thấy sẽ = -1
 				{
-					Console.WriteLine($"The Vietnamese meaning of  '{englishWord}' IS: {vietnameseWords[index]}");
+					Console.WriteLine($"The Vietnamese meaning of  '{strEnglishWord}' IS: {vietnameseWords[index]}");
 				}
 				else
 				{
