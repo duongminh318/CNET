@@ -61,6 +61,15 @@
 
 
 # 6. ARRAY & LIST
->> array: mảng
-
+>> array: 
+- mảng chứa tập hợp các giá trị có cùng kiểu dữ liệu
+>> cú pháp:
+- cách 1: datatype[] nameArray = { value1, value2,...} --> chứa giá trị khởi tạo ban đầu
+- cách2 : datatype[] nameArray = new datatype[length] --> mảng rỗng, biết độ dài
+    - datatype: kiểu dữ liệu
+    - nameArray: tên mảng
+    - value..: các element của mảng
+    - length: độ dài mảng
+>>VD:  int[] numbers = new int[length]
+- khác với js, c# Có kích thước cố định sau khi tạo,
 >> list: danh sách

@@ -7,7 +7,9 @@ int[] numbers= new int[5];      //kt cho biết mảng số lượng phần tử
 								//int[] numbers2= { 1,2,3,4,5,6,7,8};
 
 
+string[] strArray= new string[] {};
 
+Console.WriteLine(strArray.Length);
 numbers[0] = 10;
 numbers[1] = 20;	
 numbers[2] = 30;
