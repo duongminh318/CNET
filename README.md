@@ -83,4 +83,5 @@
  // Khởi tạo danh sách với các phần tử
 - List<string> fruits = new List<string> { "Apple", "Banana" }; 
 - cách hoạt động các hàm có phần giống string và array
-
+# LINQ
+>> sự kết hợp của extension method với delegate
