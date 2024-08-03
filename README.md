@@ -113,11 +113,13 @@ Console.WriteLine("Result: " + result);
   - là đối tượng mà bạn muốn mở rộng, 
   - với từ khóa this trước tham số đó.
 >> Example
-  public void Print(string message)
-        {
-            Console.WriteLine($"C1- the value is {message}");
-        }   
-    }
+
+    // nomal method
+      public void Print(string message)
+            {
+                Console.WriteLine($"C1- the value is {message}");
+            }   
+        }
 
     // extension function (hàm mở rộng)
     public static class LearnExtension1
@@ -127,11 +129,14 @@ Console.WriteLine("Result: " + result);
             Console.WriteLine($"C2 -the value is {message}");
         }
     }
-- gọi hàm
+>>gọi hàm
+
     var value = "ronaldo";
-- // gọi hàm thông thường
-    /*var learnExtension = new LearnExtension(); 
+>> gọi hàm thông thường
+
+    var learnExtension = new LearnExtension(); 
     learnExtension.Print(value);*/
-- // gọi hàm extension
+>>gọi hàm extension
+
     // static nên gọi trực tiếp không cần khởi tạo đối tượng
     value.Print(); //--> C2 -the value is ronaldo
