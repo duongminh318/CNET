@@ -11,11 +11,10 @@ namespace LearnListLinQ
         public void Print(string message)
         {
             Console.WriteLine($"C1- the value is {message}");
-        }
-
-     
+        }   
     }
 
+    // extension function (hàm mở rộng)
     public static class LearnExtension1
     {
         public static void Print(this string message)

@@ -84,4 +84,54 @@
 - List<string> fruits = new List<string> { "Apple", "Banana" }; 
 - cách hoạt động các hàm có phần giống string và array
 # LINQ
->> sự kết hợp của extension method với delegate
+>> lấy dữ liệu trong database lưu tạm trong list 
+>> từ list tiến hành truy vấn linq --> dễ dàng hơn
+>> linq: sự kết hợp của extension method với delegate
+>> delegate: đối số của 1 function là 1 function khác
+- example
+- // Phương thức tương thích với delegate
+public int Add(int x, int y)
+{
+    return x + y;
+}
+
+// Khởi tạo delegate
+MathDelegate mathDel = new MathDelegate(Add);
+
+// Gọi delegate với tham số
+int result = mathDel(5, 3);
+Console.WriteLine("Result: " + result);
+
+>> Extension Methods là một công cụ hữu ích trong C# để:
+
+- Thêm tính năng mới cho các lớp hiện có mà không cần thay đổi mã nguồn.
+- Cải thiện tính đọc hiểu của mã.
+- Tạo API dễ sử dụng hơn.
+- Bổ sung tính năng cho các lớp tự định nghĩa.
+- Syntax
+- Phương thức mở rộng phải là static và tham số đầu tiên của nó phải 
+  - là đối tượng mà bạn muốn mở rộng, 
+  - với từ khóa this trước tham số đó.
+>> Example
+  public void Print(string message)
+        {
+            Console.WriteLine($"C1- the value is {message}");
+        }   
+    }
+
+    // extension function (hàm mở rộng)
+    public static class LearnExtension1
+    {
+        public static void Print(this string message)
+        {
+            Console.WriteLine($"C2 -the value is {message}");
+        }
+    }
+- gọi hàm
+    var value = "ronaldo";
+- // gọi hàm thông thường
+    /*var learnExtension = new LearnExtension(); 
+    learnExtension.Print(value);*/
+- // gọi hàm extension
+    // static nên gọi trực tiếp không cần khởi tạo đối tượng
+    value.Print(); //--> C2 -the value is ronaldo

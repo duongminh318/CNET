@@ -19,6 +19,7 @@ namespace LearnListLinQ
             Console.WriteLine(english);
         }
 
+        //cách 1 viết điều kiện tường minh
         private double ValidateScore(string subject)
         {
             Console.WriteLine($"Input the {subject} score");
@@ -30,6 +31,8 @@ namespace LearnListLinQ
             }
             return score;
         }
+
+        //cách 2: điều kiện, đối số là 1 hàm, (delegate)
 
         public double ValidateScoreWithCondition(string subject, Func<double, bool> condition)
         {
