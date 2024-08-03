@@ -1,5 +1,4 @@
-﻿# CNET
-
+﻿
 # LEARNING C# .NET ASP CORE IN T3H
 
 # 1. Git, Github , Visual studio
