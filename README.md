@@ -107,7 +107,7 @@ Console.WriteLine("Result: " + result);
 - Cải thiện tính đọc hiểu của mã.
 - Tạo API dễ sử dụng hơn.
 - Bổ sung tính năng cho các lớp tự định nghĩa.
-- Syntax
+>> Syntax
 - Phương thức mở rộng phải là static và tham số đầu tiên của nó phải 
   - là đối tượng mà bạn muốn mở rộng, 
   - với từ khóa this trước tham số đó.
@@ -135,7 +135,9 @@ Console.WriteLine("Result: " + result);
 
     var learnExtension = new LearnExtension(); 
     learnExtension.Print(value);*/
->>gọi hàm extension
+>> gọi hàm extension
 
     // static nên gọi trực tiếp không cần khởi tạo đối tượng
     value.Print(); //--> C2 -the value is ronaldo
+>> Kết hợp delegate và extension method ta được linq
+- example
