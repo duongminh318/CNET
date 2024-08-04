@@ -141,3 +141,15 @@ Console.WriteLine("Result: " + result);
     value.Print(); //--> C2 -the value is ronaldo
 >> Kết hợp delegate và extension method ta được linq
 - example
+
+# Action: 
+- hành động nào đấy không cần kết quả trả về, tương đồng với void function nhưng khác ờ chỗ
+- Hàm void: Được sử dụng trong nhiều loại ứng dụng và ngữ cảnh lập trình để thực hiện các
+  - tác vụ mà không cần trả lại giá trị.
+    - Chúng có thể là các hàm trợ giúp, xử lý sự kiện, hoặc các chức năng khác.
+- Action: Được sử dụng trong các framework web như ASP.NET MVC hoặc ASP.NET Core 
+- để xử lý yêu cầu HTTP và trả về kết quả cho client. Trong ASP.NET Core MVC, action thường trả về IActionResult hoặc ActionResult, không phải void.
+- có thể handel thêm chức năng nào đấy của object
+
+
+# LinQ

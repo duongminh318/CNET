@@ -22,4 +22,6 @@ namespace LearnListLinQ
             Console.WriteLine($"C2 -the value is {message}");
         }
     }
+
+  
 }

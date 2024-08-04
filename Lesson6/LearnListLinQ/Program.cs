@@ -29,11 +29,43 @@ var newListNumbers2 = learn.CreateList(listNumbers, s => s % 2 != 0);
 var newListNumbers3 = learn.CreateList(listNumbers, s => s % 2 == 0);*/
 
 // extension fucntion
-var value = "ronaldo";
+//var value = "ronaldo";
 /*var learnExtension = new LearnExtension();
 learnExtension.Print(value);*/
 // static nên gọi trực tiếp không cần thông qua đối tượng
-value.Print(); //--> C2 -the value is ronaldo
+//value.Print(); //--> C2 -the value is ronaldo
 
+/* ACTION*/
+
+//var learnAction= new LearnAction();
+/*Action<double> print=s=>Console.WriteLine("the score is : "+s);
+learnAction.HandleStudentScore(print);*/
+
+/*var studentScores = new List<double>() { 5, 8, 9, 7.5, 0 };
+Action<double> printList = s =>
+{
+    studentScores.Add(s);
+    Console.WriteLine(" The list scores");
+    foreach (var score in studentScores)
+        Console.Write(score+ "\t");
+};
+learnAction.HandleStudentScore(printList);
+
+learnAction.HandleStudentScore(s =>
+{
+    studentScores.Add(s);
+    Console.WriteLine(" The list scores");
+    foreach (var score in studentScores)
+        Console.Write(score + "\t");
+});
+*/
+
+var demoLinQ= new DemoLinQ();
+//demoLinQ.PrintOddNumbers();
+//demoLinQ.PrintOne();
+//demoLinQ.PrintSelect1();
+
+//demoLinQ.TakeSkip();
+demoLinQ.AllAny();
 Console.ReadKey();
 
