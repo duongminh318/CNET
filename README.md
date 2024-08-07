@@ -153,3 +153,8 @@ Console.WriteLine("Result: " + result);
 
 
 # LinQ
+
+# Một số các Extension Method của string
+>> string
+
+>> string builder,các method điều có trên string nhưng hiệu năng ok hơn string
