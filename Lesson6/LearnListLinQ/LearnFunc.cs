@@ -32,7 +32,7 @@ namespace LearnListLinQ
             return score;
         }
 
-        //cách 2: điều kiện, đối số là 1 hàm, (delegate)
+        //cách 2: điều kiện, đối số là 1 function, (delegate)
 
         public double ValidateScoreWithCondition(string subject, Func<double, bool> condition)
         {

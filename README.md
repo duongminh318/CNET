@@ -100,6 +100,44 @@ MathDelegate mathDel = new MathDelegate(Add);
 // Gọi delegate với tham số
 int result = mathDel(5, 3);
 Console.WriteLine("Result: " + result);
+# Delegate Function
+>> tham số của một hàm là một function 
+- function giúp sử lý một việc gì đó --> return : true/false --> xử lý hàm 
+- vd: kiểm tra xem điểm nhập đúng không
+
+       public double ValidateScoreWithCondition(string subject, Func<double, bool> condition)
+        {
+            Console.WriteLine($"Input the {subject} score");
+            var check = double.TryParse(Console.ReadLine(), out var score) && condition(score);
+            while (!check)
+            {
+                Console.WriteLine($"The {subject} score is not correct,reinput");
+                check = double.TryParse(Console.ReadLine(), out score) && condition(score);
+            }
+            return score;
+        }
+
+>> Func là delegate: Đại diện cho các phương thức có giá trị trả về.
+- Có thể nhận từ 0 đến 16 tham số: Tùy thuộc vào số lượng tham số mà bạn muốn truyền vào delegate.
+- Có thể sử dụng trong nhiều tình huống: Ví dụ như truyền phương thức như tham số cho các phương thức khác, lưu trữ các phương thức để gọi sau, hoặc trong các biểu thức lambda.
+- Func rất hữu ích trong lập trình C# khi bạn cần thực hiện các phép toán, xử lý dữ liệu, hoặc thực hiện các thao tác khác với các phương thức không cần phải trả về giá trị.
+- như kiểu lai với js trong lamda, function
+>> Example
+
+
+    static void Main()
+    {
+        // Sử dụng Func trong một phương thức
+        int result = PerformOperation(3, 4, (x, y) => x + y);
+        Console.WriteLine(result); // Output: 7
+    }
+
+    static int PerformOperation(int a, int b, Func<int, int, int> operation)
+    {
+        return operation(a, b);
+    }
+
+
 
 >> Extension Methods là một công cụ hữu ích trong C# để:
 

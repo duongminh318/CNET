@@ -7,6 +7,8 @@ using LearnListLinQ;
 //demo.EasyList();
 demo.Dictionary();
 */
+
+/* FUNCTION DELEGATE*/
 var learn = new LearnFunc();
 //learn.InputScore(); 
 /*learn.ValidateScoreWithCondition("math", s => s >= 0 && s <= 10);
