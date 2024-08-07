@@ -8,7 +8,8 @@ namespace LearnListLinQ
 {
     public class LearnAction
     {
-        public void HandleStudentScore(Action<double> handleScore)
+        // tuỳ chỉnh danh sách sinh viên bằng một action
+        public void HandleStudentScore(Action<double> handleScore) //tham số là 1 hàm
         {
             Console.WriteLine("input the student score");
             double score = double.Parse(Console.ReadLine());

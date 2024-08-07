@@ -149,8 +149,31 @@ Console.WriteLine("Result: " + result);
     - Chúng có thể là các hàm trợ giúp, xử lý sự kiện, hoặc các chức năng khác.
 - Action: Được sử dụng trong các framework web như ASP.NET MVC hoặc ASP.NET Core 
 - để xử lý yêu cầu HTTP và trả về kết quả cho client. Trong ASP.NET Core MVC, action thường trả về IActionResult hoặc ActionResult, không phải void.
-- có thể handel thêm chức năng nào đấy của object
 
+- cú pháp giống function trong js
+>> 
+    Action<string, int> printMessage = (message, count) =>
+    {
+    for (int i = 0; i < count; i++)
+    {
+        Console.WriteLine(message);
+    }
+    };
+    printMessage("Hello", 3); -->   Hello 3
+
+- có thể handel thêm chức năng nào đấy của object với vai trò Action là tham số
+ - vd:  
+ - 
+      public void HandleStudentScore(Action<double> handleScore) //tham số là 1 action c#
+        {
+            Console.WriteLine("input the student score");
+            double score = double.Parse(Console.ReadLine());
+            handleScore(score);
+
+        }
+
+    - được khởi tạo nhưng sẽ không chay và chỉ chạy khi được chuyền vào đối số của 1 object nào náo 
+    --> và được chiệu gọi 
 
 # LinQ
 

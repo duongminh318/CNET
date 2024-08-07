@@ -37,35 +37,38 @@ learnExtension.Print(value);*/
 
 /* ACTION*/
 
-//var learnAction= new LearnAction();
-/*Action<double> print=s=>Console.WriteLine("the score is : "+s);
-learnAction.HandleStudentScore(print);*/
+var learnAction= new LearnAction(); // khai báo đối tượng
+/*Action<double> print = s =>  // viết thêm 1 hàm rồi chuyền vào (đồi số)
+{
+    Console.WriteLine("the score is : " + s);
+};
+learnAction.HandleStudentScore(print); //HandleStudentScore(đối số là 1 hàm)*/
 
-/*var studentScores = new List<double>() { 5, 8, 9, 7.5, 0 };
+var studentScores = new List<double>() { 5, 8, 9, 7.5, 0 };
 Action<double> printList = s =>
 {
     studentScores.Add(s);
     Console.WriteLine(" The list scores");
     foreach (var score in studentScores)
-        Console.Write(score+ "\t");
+        Console.Write(score + "\t");
 };
-learnAction.HandleStudentScore(printList);
+learnAction.HandleStudentScore(printList); // gọi Action phía trên để add
 
-learnAction.HandleStudentScore(s =>
+/*learnAction.HandleStudentScore(s =>
 {
     studentScores.Add(s);
     Console.WriteLine(" The list scores");
     foreach (var score in studentScores)
         Console.Write(score + "\t");
-});
-*/
+});*/
 
-var demoLinQ= new DemoLinQ();
+
+var demoLinQ = new DemoLinQ();
 //demoLinQ.PrintOddNumbers();
 //demoLinQ.PrintOne();
 //demoLinQ.PrintSelect1();
 
 //demoLinQ.TakeSkip();
-demoLinQ.AllAny();
+//demoLinQ.AllAny();
 Console.ReadKey();
 
