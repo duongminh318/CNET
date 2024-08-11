@@ -35,15 +35,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnListLinQ", "Lesson6\Le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EX_Lesson6", "Lesson6\EX_Lesson6\EX_Lesson6.csproj", "{CC759728-9C1C-4BC9-A87A-6CE19C75202A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnDictionary", "Lesson6\LearnDictionary\LearnDictionary.csproj", "{AA5AC686-7F0E-4B86-8C71-EB768EFC7737}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnDictionary", "Lesson6\LearnDictionary\LearnDictionary.csproj", "{AA5AC686-7F0E-4B86-8C71-EB768EFC7737}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson7", "Lesson7", "{314B2F78-FC5B-422F-B621-53CD144F0A42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnString", "Lesson7\LearnString\LearnString.csproj", "{C0703343-34FC-4288-8CD1-95AD4A05EAD8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnString", "Lesson7\LearnString\LearnString.csproj", "{C0703343-34FC-4288-8CD1-95AD4A05EAD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnDateTime", "Lesson7\LearnDateTime\LearnDateTime.csproj", "{DA0D3ECB-4FA0-4CF0-864C-45E5C1710651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnDateTime", "Lesson7\LearnDateTime\LearnDateTime.csproj", "{DA0D3ECB-4FA0-4CF0-864C-45E5C1710651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnMath", "Lesson7\LearnMath\LearnMath.csproj", "{F86B328A-3F27-4CCA-A4D8-62816F1A973D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearnMath", "Lesson7\LearnMath\LearnMath.csproj", "{F86B328A-3F27-4CCA-A4D8-62816F1A973D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson8", "Lesson8", "{42759A2E-C5D9-4C01-83AE-36D9705BC621}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnOOP", "Lesson8\LearnOOP\LearnOOP.csproj", "{DE69591E-696E-44AE-8BD3-31F862BAAC9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +111,10 @@ Global
 		{F86B328A-3F27-4CCA-A4D8-62816F1A973D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F86B328A-3F27-4CCA-A4D8-62816F1A973D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F86B328A-3F27-4CCA-A4D8-62816F1A973D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE69591E-696E-44AE-8BD3-31F862BAAC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE69591E-696E-44AE-8BD3-31F862BAAC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE69591E-696E-44AE-8BD3-31F862BAAC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE69591E-696E-44AE-8BD3-31F862BAAC9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,6 +135,7 @@ Global
 		{C0703343-34FC-4288-8CD1-95AD4A05EAD8} = {314B2F78-FC5B-422F-B621-53CD144F0A42}
 		{DA0D3ECB-4FA0-4CF0-864C-45E5C1710651} = {314B2F78-FC5B-422F-B621-53CD144F0A42}
 		{F86B328A-3F27-4CCA-A4D8-62816F1A973D} = {314B2F78-FC5B-422F-B621-53CD144F0A42}
+		{DE69591E-696E-44AE-8BD3-31F862BAAC9E} = {42759A2E-C5D9-4C01-83AE-36D9705BC621}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8AE9743-16E7-480F-819E-3A1374F4CBA5}
