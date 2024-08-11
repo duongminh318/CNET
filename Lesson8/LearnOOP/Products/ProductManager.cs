@@ -11,7 +11,9 @@ namespace LearnOOP.Products
 		private ProductService productService = new ProductService();
 		public void Init()
 		{
-			Console.WriteLine($"Choose the option: {Environment.NewLine} 1.Add {Environment.NewLine} 2.Update {Environment.NewLine} 3.Display {Environment.NewLine} 4.Delete");
+			Console.WriteLine($"Choose the option: {Environment.NewLine} " +
+				$"1.Add {Environment.NewLine} 2.Update {Environment.NewLine} " +
+				$"3.Display {Environment.NewLine} 4.Delete");
 			if (int.TryParse(Console.ReadLine(), out int option))
 			{
 				switch (option)
