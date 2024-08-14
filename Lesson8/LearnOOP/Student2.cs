@@ -53,5 +53,24 @@ namespace LearnOOP
         }
 
         public string Info2 => $"Id: {Id} - Name: {Name} - Age: {Age} - Address: {Address}";
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Id: {Id}, Name: {Name}, Age: {Age}, Address: {Address}");
+        }
+        public Student2(int id, string name, int age, string address)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Age = age;
+            this.Address = address;
+        }
+
+        // Constructor với 3 tham số
+        public Student2(int id, string name, int age)
+        {
+            this.Id = id;
+            this.Name = name;
+            this.Age = age;
+        }
     }
 }
