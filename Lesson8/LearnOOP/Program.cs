@@ -31,6 +31,7 @@ student2.DisplayInfo();
 //Student2 student3 = new Student2(2, "Jane Smith", 22);
 
 
+// gọi hàm produc5
 var manager = new ProductManager();
 manager.Init();
 

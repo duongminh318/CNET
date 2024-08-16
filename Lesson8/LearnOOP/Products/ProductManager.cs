@@ -20,7 +20,10 @@ namespace LearnOOP.Products
 
             while (isContinue)
             {
-                Console.WriteLine($"Choose the option: {Environment.NewLine} 1.Add {Environment.NewLine} 2.Update {Environment.NewLine} 3.Display {Environment.NewLine} 4.Delete {Environment.NewLine} 5.Search");
+                Console.WriteLine($"Choose the option: {Environment.NewLine} " +
+                    $"1.Add {Environment.NewLine} 2.Update {Environment.NewLine} " +
+                    $"3.Display {Environment.NewLine} 4.Delete {Environment.NewLine} " +
+                    $"5.Search");
                 var option = ValidateInt("option", s => s <= 5 && s >= 1);
                 switch (option)
                 {
@@ -142,7 +145,7 @@ namespace LearnOOP.Products
 
         }
 
-
+/*VALIDATE METHOD*/
         private decimal ValidateDecimal(string field, Func<decimal, bool> condition)
         {
             Console.WriteLine($"Input the {field}");
