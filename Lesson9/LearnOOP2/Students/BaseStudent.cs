@@ -9,8 +9,9 @@ namespace LearnOOP2.Students
     public class BaseStudent
     {
         // Thuộc tính tự động với getter và setter
+      
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Name { get; set; }  
         public double Math { get; set; }
         public double Lit { get; set; }
 
@@ -22,5 +23,8 @@ namespace LearnOOP2.Students
             Math = math;
             Lit = lit;
         }
+
+
+                         
     }
 }
