@@ -24,7 +24,10 @@ namespace LearnOOP2.Students
             Lit = lit;
         }
 
+        public string GetInfo()
+        {
+            return $"Id: {Id} - Name: {Name} -  Math: {Math} Lit: {Lit}";
+        }
 
-                         
     }
 }

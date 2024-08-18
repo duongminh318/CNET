@@ -219,3 +219,6 @@ Console.WriteLine("Result: " + result);
 >> string
 
 >> string builder,các method điều có trên string nhưng hiệu năng ok hơn string
+
+# OOP
+>> kế thừa: con sẽ kế thừa các thuộc tình, phương thức public của cha
