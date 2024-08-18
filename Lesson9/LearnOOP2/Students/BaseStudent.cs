@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LearnOOP2.Students
 {
-    public class BaseStudent
+    public abstract class BaseStudent
     {
         // Thuộc tính tự động với getter và setter
       
@@ -16,7 +16,7 @@ namespace LearnOOP2.Students
         public double Lit { get; set; }
 
         // Constructor của lớp BaseStudent
-        public BaseStudent(int id, string name, double math, double lit)
+        public  BaseStudent(int id, string name, double math, double lit)
         {
             Id = id;
             Name = name;
@@ -24,10 +24,11 @@ namespace LearnOOP2.Students
             Lit = lit;
         }
 
-        public string GetInfo()
+        public virtual string GetInfo()
         {
-            return $"Id: {Id} - Name: {Name} -  Math: {Math} Lit: {Lit}";
+            return $"Id: {Id} - Name: {Name} - - Avg: {GetAvg()} - Math: {Math} Lit: {Lit}";
         }
-
+        protected abstract double GetAvg();
+        
     }
 }

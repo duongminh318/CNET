@@ -222,3 +222,11 @@ Console.WriteLine("Result: " + result);
 
 # OOP
 >> kế thừa: con sẽ kế thừa các thuộc tình, phương thức public của cha
+>> Method Virtual: ảo ở lớp, sau đó viết overide (ghi đè) ở lớp con --> Tính đa hình
+>> Phân biêt abstract và virtual (cha) --> override ở con
+- virtual (ảo): cha phải có thân hàm, con có thể có override hoặc không
+- abstract (trừu tượng): cha không có thân hàm, con bắt buộc phải có override
+    - abstract class: không gọi trực tiếp bên main được
+
+
+    >> CTRL + . >> ra cái bóng đèn
