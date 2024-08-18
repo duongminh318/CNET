@@ -21,7 +21,7 @@ namespace LearnOOP2.Ex1
         // Phương thức để thêm khóa học vào danh sách
         public void EnrollCourse(Course course)
         {
-            Courses.Add(course);        // thêm course vào sinh viên này
+            Courses.Add(course);        // thêm course vào list khoá học của sinh viên này
         }
 
         // Phương thức hiển thị thông tin của sinh viên
