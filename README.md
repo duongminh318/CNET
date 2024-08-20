@@ -229,4 +229,7 @@ Console.WriteLine("Result: " + result);
     - abstract class: không gọi trực tiếp bên main được
 
 
-    >> CTRL + . >> ra cái bóng đèn
+    >> CTRL + . >> ra cái bóng đèn (gợi ý code)
+
+# EX1: Manager Education
+![diagram_m_e](./manager_edu_diagram.jpg)
