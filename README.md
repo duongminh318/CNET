@@ -232,4 +232,4 @@ Console.WriteLine("Result: " + result);
     >> CTRL + . >> ra cái bóng đèn (gợi ý code)
 
 # EX1: Manager Education
-![diagram_m_e](./manager_edu_diagram.jpg)
+![diagram_m_e](./Ex1/manager_edu_diagram.jpg)
