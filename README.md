@@ -227,9 +227,15 @@ Console.WriteLine("Result: " + result);
 - virtual (ảo): cha phải có thân hàm, con có thể có override hoặc không
 - abstract (trừu tượng): cha không có thân hàm, con bắt buộc phải có override
     - abstract class: không gọi trực tiếp bên main được
+- 1 vài trường hợp update, qua viewmodel: tạo 1 cái model khác để update , 
+tránh trường hợp update vào thẳng vào cái chính
 
 
     >> CTRL + . >> ra cái bóng đèn (gợi ý code)
 
+- interface: 1 class có chứa các (chữ ký) method ko có thân hàm
+    -- mấy class khác kế thừa và override lại phương thức đó
+- IGeneric: 1 kiểu interface rộng hơn, dùng chung cho nhiều các object, class
+- systax: 
 # EX1: Manager Education
 ![diagram_m_e](./Lesson9/LearnOOP2/Ex1/manager_edu_diagram.jpg)
