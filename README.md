@@ -63,10 +63,9 @@
 >> ARRAY: 
 - mảng chứa tập hợp các giá trị có cùng kiểu dữ liệu
 >> cú pháp:
-- cách 1: datatype[] nameArray = { value1, value2,...}
- - --> chứa giá trị khởi tạo ban đầu
+- cách 1: datatype[] nameArray = { value1, value2,...} --> chứa giá trị khởi tạo ban đầu
 - cách2 : datatype[] nameArray = new datatype[length] 
- - --> mảng rỗng, biết độ dài
+	- mảng rỗng, biết độ dài
     - datatype: kiểu dữ liệu
     - nameArray: tên mảng
     - value..: các element của mảng
@@ -137,10 +136,11 @@ Console.WriteLine("Result: " + result);
         return operation(a, b);
     }
 
-
-
+- giải thích
+    - Func<int, int, int> operation : khai báo function với các tham số
+    - triển khai hàm dưới arrow function javascript
 >> Extension Methods là một công cụ hữu ích trong C# để:
-
+s
 - Thêm tính năng mới cho các lớp hiện có mà không cần thay đổi mã nguồn.
 - Cải thiện tính đọc hiểu của mã.
 - Tạo API dễ sử dụng hơn.
@@ -183,25 +183,28 @@ Console.WriteLine("Result: " + result);
 # Action: 
 - hành động nào đấy không cần kết quả trả về, tương đồng với void function nhưng khác ờ chỗ
 - Hàm void: Được sử dụng trong nhiều loại ứng dụng và ngữ cảnh lập trình để thực hiện các
-  - tác vụ mà không cần trả lại giá trị.
+tác vụ mà không cần trả lại giá trị.
     - Chúng có thể là các hàm trợ giúp, xử lý sự kiện, hoặc các chức năng khác.
 - Action: Được sử dụng trong các framework web như ASP.NET MVC hoặc ASP.NET Core 
 - để xử lý yêu cầu HTTP và trả về kết quả cho client. Trong ASP.NET Core MVC, action thường trả về IActionResult hoặc ActionResult, không phải void.
 
 - cú pháp giống function trong js
 >> 
+
     Action<string, int> printMessage = (message, count) =>
     {
-    for (int i = 0; i < count; i++)
-    {
-        Console.WriteLine(message);
-    }
+		for (int i = 0; i < count; i++)
+		{
+			Console.WriteLine(message);
+		}
     };
     printMessage("Hello", 3); -->   Hello 3
 
+- systax: Action<tham số 1, tham số 2...> tên hàm = (tham số 1, tham số 2, ...)=> { khồi lệnh};
 - có thể handel thêm chức năng nào đấy của object với vai trò Action là tham số
- - vd:  
- - 
+
+>> Example:  
+  
       public void HandleStudentScore(Action<double> handleScore) //tham số là 1 action c#
         {
             Console.WriteLine("input the student score");
@@ -210,8 +213,8 @@ Console.WriteLine("Result: " + result);
 
         }
 
-    - được khởi tạo nhưng sẽ không chay và chỉ chạy khi được chuyền vào đối số của 1 object nào náo 
-    --> và được chiệu gọi 
+- được khởi tạo nhưng sẽ không chay và chỉ chạy khi được chuyền vào đối số của 1 object nào đó  --> và được chiệu gọi 
+    
 
 # LinQ
 
@@ -221,9 +224,10 @@ Console.WriteLine("Result: " + result);
 >> string builder,các method điều có trên string nhưng hiệu năng ok hơn string
 
 # OOP
->> kế thừa: con sẽ kế thừa các thuộc tình, phương thức public của cha
->> Method Virtual: ảo ở lớp, sau đó viết overide (ghi đè) ở lớp con --> Tính đa hình
->> Phân biêt abstract và virtual (cha) --> override ở con
+- kế thừa: con sẽ kế thừa các thuộc tình, phương thức public của cha
+
+- Method Virtual: ảo ở lớp, sau đó viết overide (ghi đè) ở lớp con --> Tính đa hình
+- Phân biêt abstract và virtual (cha) --> override ở con
 - virtual (ảo): cha phải có thân hàm, con có thể có override hoặc không
 - abstract (trừu tượng): cha không có thân hàm, con bắt buộc phải có override
     - abstract class: không gọi trực tiếp bên main được
@@ -233,9 +237,26 @@ tránh trường hợp update vào thẳng vào cái chính
 
     >> CTRL + . >> ra cái bóng đèn (gợi ý code)
 
-- interface: 1 class có chứa các (chữ ký) method ko có thân hàm
-    -- mấy class khác kế thừa và override lại phương thức đó
+- interface: 1 class có chứa các (chữ ký) method, ko có thân hàm
+    --> các class con kế thừa sẽ override lại phương thức đó
 - IGeneric: 1 kiểu interface rộng hơn, dùng chung cho nhiều các object, class
+- BaseEntity: tạo ra 1 class cha dùng chung với các properties được khai báo sẵn
+    - các object con kế thừa và sử dụng các properties của BaseEntity
+>> Example
+
+     public abstract class BaseEntity<TKey>  // properties dùng chung ở object cha
+        {
+            public TKey Id { get; set; }
+        }
+
+     public class Blog:  BaseEntity<int>    // object con kế thừa và sử dụng
+	    {
+	        //	public int Id { get; set; }
+	    }
 - systax: 
 # EX1: Manager Education
 ![diagram_m_e](./Lesson9/LearnOOP2/Ex1/manager_edu_diagram.jpg)
+
+# Clean Code
+- folder Abstract chứa các Generic InterFace
+- folder Helpers : các hàm hỗ trợ như Validate....

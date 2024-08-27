@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LearnGeneric.Blogs
 {
-	public class BlogService : IGenericService<Blog, UpdateBlogViewModel> // kế thừa từ interface dùng chung
+	public class BlogService : IGenericService<Blog, UpdateBlogViewModel> // kế thừa từ interface dùng chung IGeneric
 	{
 		public void Add(Blog blog)
 		{

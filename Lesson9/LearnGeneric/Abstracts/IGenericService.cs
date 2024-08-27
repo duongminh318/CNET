@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace LearnGeneric.Abstracts
 {
 	// dùng chung interface
-	public interface IGenericService<TEntity, TUpdateVM>  // model, updateviewmodel
+	public interface IGenericService<TEntity, TUpdateVM>  // <model, updateviewmodel> --> các tham số chuyền vào
 	{
 		void Add(TEntity blog);
 		void Update(TUpdateVM model);

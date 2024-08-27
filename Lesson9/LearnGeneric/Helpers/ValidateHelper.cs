@@ -8,6 +8,7 @@ namespace LearnGeneric.Helpers
 {
     public static class ValidateHelper
     {
+        // hàm kiểm tra xem có nhập chính xác 1 số thực không
         public static decimal ValidateDecimal(string field, Func<decimal, bool> condition)
         {
             Console.WriteLine($"Input the {field}");
@@ -20,6 +21,7 @@ namespace LearnGeneric.Helpers
             return value;
         }
 
+        // hàm kiểm tra xem có nhập chính xác 1 số nguyên không
         public static int ValidateInt(string field, Func<int, bool> condition)
         {
             Console.WriteLine($"Input the {field}");
