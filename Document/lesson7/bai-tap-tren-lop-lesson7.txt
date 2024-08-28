@@ -1,0 +1,8 @@
+Ex1
+Viết một chương trình C# để đảo ngược một chuỗi do người dùng nhập vào. Sử dụng lớp StringBuilder để thực hiện việc này.
+
+Ex2
+Viết một chương trình C# để tính số ngày giữa hai ngày do người dùng nhập vào. Người dùng sẽ nhập hai ngày theo định dạng yyyy-MM-dd. Sử dụng kiểu dữ liệu DateTime để tính toán.
+
+Ex3
+Viết một chương trình C# để tính diện tích và chu vi của một hình tròn. Người dùng sẽ nhập bán kính của hình tròn. Sử dụng lớp Math để tính toán.

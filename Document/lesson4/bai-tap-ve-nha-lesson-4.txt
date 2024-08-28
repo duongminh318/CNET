@@ -1,0 +1,2 @@
+Viết chương trình C# để thực hiện một phép toán đơn giản (cộng, trừ, nhân, chia) dựa trên sự chọn lựa của người dùng (viết trong hàm và gọi hàm trong Program.cs)
+Viết chương trình nhập vào hai số, thực hiện phép chia số thứ 1 cho số thứ 2, sử dụng try catch để bắt exception trong trường hợp số thứ 2 nhập  = 0.

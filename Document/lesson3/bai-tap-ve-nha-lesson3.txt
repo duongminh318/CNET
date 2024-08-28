@@ -1,0 +1,1 @@
+Viết chương trình C# để kiểm tra xem ba cạnh nhập vào có tạo thành tam giác hay không, và nếu có, là tam giác gì (nhọn, tù, hay vuông).

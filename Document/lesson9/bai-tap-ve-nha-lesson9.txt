@@ -1,0 +1,13 @@
+Ex1
+Xây dung lớp cơ sở
++Tạo một lớp Person với các thuộc tính cơ bản như Name, Age.
++Thêm một phương thức PrintDetails để hiển thị thông tin về người này.
+Kế thừa:
++Tạo hai lớp con Student và Teacher kế thừa từ lớp Person.
++Trong lớp Student, thêm một thuộc tính StudentId và một phương thức Study để mô tả hành động học tập.
++Trong lớp Teacher, thêm một thuộc tính Subject và một phương thức Teach để mô tả hành động giảng dạy.
+Override:
++Trong lớp con Student và Teacher, ghi đè phương thức PrintDetails để hiển thị thông tin đặc biệt của học sinh và giáo viên.
+Sử dụng:
++Tạo một số đối tượng của lớp Student và Teacher.
++Gọi các phương thức và hiển thị thông tin của từng đối tượng.

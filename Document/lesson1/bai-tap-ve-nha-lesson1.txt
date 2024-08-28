@@ -1,0 +1,3 @@
+1. Viết chương trình cho phép người dung nhập các thông tin sau:
+Tên, tuổi,địa chỉ, giới tính
+2. In ra ngoài màn hình các thông tin đó sử dung template string

@@ -1,0 +1,6 @@
+Ex1
+Viết một chương trình C# để tính căn bậc hai và giá trị tuyệt đối của một số do người dùng nhập vào. Sử dụng lớp Math để tính toán.
+Ex2
+Viết một chương trình C# để tính tuổi của một người từ ngày sinh của họ. Người dùng sẽ nhập ngày sinh theo định dạng yyyy-MM-dd. Chương trình sẽ tính và hiển thị tuổi của người dùng
+Ex3
+Viết một chương trình C# để tạo một chuỗi từ danh sách các từ do người dùng nhập vào. Người dùng sẽ nhập từng từ một và kết thúc bằng từ "done". Sử dụng lớp StringBuilder để nối các từ thành một câu hoàn chỉnh.

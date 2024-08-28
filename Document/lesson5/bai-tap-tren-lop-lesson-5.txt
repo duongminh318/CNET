@@ -1,0 +1,8 @@
+Bài tập 1
+In ra các số lẻ và chia hết cho 3 trong phạm vi từ 1 =>100.
+Bài tập 2
+Viết chương trình cho phép người dùng nhập tên tuổi, địa chỉ và in ra màn hình. Có thêm yêu cầu cho phép người dùng lựa chọn số lần thực hiện chương trình.
+Bài tập 3
+Viết chương trình cho phép người dùng nhập tên tuổi, địa chỉ và in ra màn hình. Tuổi yêu cầu trong khoảng từ 1 – 100, nếu người dùng nhập tuổi không hợp lệ thì thông báo lỗi ra và yêu cầu thực hiện đến khi hợp lệ mới thôi
+Bài tập 4
++Viết chương trình nhập thông tin sinh viên: tên, tuổi, điểm toán, điểm văn, điểm anh. Sau khi nhập xong thì in ra thông tin tên – tuổi – điểm trung bình 3 môn. Tuổi trong khoảng từ 12 => 15. Điểm là số thực trong khoảng từ 0, đến 10. Trong quá trình nhập nếu người dùng nhập thông tin tuổi và điểm không hợp lệ thì yêu cầu nhập đến khi nào hợp lệ mới thôi. Sau khi nhập xong 1 học sinh, hỏi người dùng có muố tiếp tục hay không (y/n). Nếu bấm “y” thì tiếp tục nhập học sinh, ngược lại thoát chương trình.

@@ -1,0 +1,15 @@
+-	Xây dựng lớp Author (Tác giả) với các thuộc tính sau:
+•	string AuthorName (tên của tác giả)
+•	int YearOfBirth (năm sinh của tác giả)
+-	Xây dựng lớp Book (Sách) với các thuộc tính sau:
+•	string Title (tên của sách)
+•	Author AuthorInfo (thông tin về tác giả của sách)
+•	int YearPublished (năm xuất bản của sách)
+-	Xây dựng một lớp Library (Thư viện) với các danh sách sau:
+•	List<Book> Books (danh sách các sách)
+•	List<Author> Authors (danh sách các tác giả)
+-	Thực hiện các công việc sau:
+•	Thêm vài tác giả và sách vào danh sách của lớp Library.
+•	In thông tin về tất cả sách và tác giả trong thư viện.
+-	
+Thêm các phương thức cho lớp Author và Book để thực hiện các chức năng như in thông tin, tính tuổi (đối với tác giả) và thêm/sửa/xóa sách từ thư viện..

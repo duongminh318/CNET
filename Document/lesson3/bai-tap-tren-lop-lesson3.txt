@@ -1,0 +1,5 @@
+Exercise 1
+1.Viết chương trình C# để kiểm tra xem một số nguyên nhập từ người dùng là số chẵn hay lẻ.
+2.Viết chương trình C# để tìm số lớn nhất trong ba số nhập từ người dùng.
+Exercise 2
+1. Viết chương trình kiểm tra 1 năm có phải năm nhuận hay không, biết rằng 1 năm nếu là năm nhuận thì vừa chia hết cho 100 vừa chia hết cho 400 hoặc vừa không chia hết cho 100 và vừa chia hết cho 4 

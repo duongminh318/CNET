@@ -1,0 +1,17 @@
+Ex1
+Viết một chương trình quản lý sản phẩm sử dụng lập trình hướng đối tượng. Chương trình cần có các tính năng sau:
+
+Quản lý sản phẩm:
+
+Tạo sản phẩm mới (bao gồm tên sản phẩm, mã sản phẩm, giá, số lượng tồn kho).
+Cập nhật thông tin sản phẩm.
+Xóa sản phẩm.
+Tìm kiếm sản phẩm theo mã sản phẩm hoặc tên sản phẩm.
+Hiển thị thông tin sản phẩm:
+
+Hiển thị danh sách tất cả các sản phẩm hiện có.
+Hiển thị chi tiết thông tin của một sản phẩm cụ thể.
+Quản lý kho hàng:
+
+Cập nhật số lượng tồn kho khi có hàng mới nhập về.
+Trừ số lượng tồn kho khi sản phẩm được bán ra.

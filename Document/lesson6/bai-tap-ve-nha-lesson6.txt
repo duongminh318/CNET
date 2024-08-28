@@ -1,0 +1,21 @@
+Ex1
+Tạo 1 list các số nguyên, sử dụng LinQ để
++ Tính tổng tất cả các số lẻ có trong list
++ Lấy ra từ list đã cho các số lớn hơn 3 và chia hết cho 3. Sau đó sắp xếp thep thứ tự tăng dần.
+
+Ex2
+Hãy tạo một ứng dụng đơn giản để quản lý điểm số của học sinh bằng cách sử dụng Dictionary. Yêu cầu bao gồm:
+
+1.Thêm điểm số của học sinh:
++ Tạo một Dictionary<string, int> để lưu trữ điểm số của các học sinh.
++ Yêu cầu người dùng nhập tên học sinh và điểm số tương ứng.
++ Thêm thông tin này vào Dictionary.
+2.Hiển thị điểm số của học sinh:
+
++ Cho phép người dùng nhập tên của học sinh để kiểm tra điểm số của họ.
++ Kiểm tra xem tên học sinh có tồn tại trong Dictionary hay không.
++ Nếu có, in ra tên học sinh và điểm số của họ. Nếu không, thông báo rằng học sinh không tồn tại.
+
+3.Xóa thông tin của học sinh:
++ Cho phép người dùng nhập tên học sinh cần xóa.
++ Xóa thông tin của học sinh này khỏi Dictionary.

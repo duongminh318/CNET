@@ -1,0 +1,5 @@
+Bài tập 1:
+Thực hành viết chương trình cho phép người dùng nhập bán kính và trả ra chu vi và diện tích của hình tròn. Sử dung tryParse để bắt lỗi khi người dùng nhập dữ liệu không hợp lệ
+
+Bài tập 2
+Thực hành viết hàm tính trung bình cộng của 3 số. Yêu cầu viết hàm trong class và gọi hàm thông qua đối tượng.

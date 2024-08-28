@@ -1,0 +1,7 @@
+Viết một chương trình có sử dung Dictionary để quản lý hệ thống kho hàng. Chương trình nên cho phép người dùng:
+
+Thêm sản phẩm mới và giá của sản phẩm.
+Cập nhật giá của một sản phẩm hiện có.
+Xóa một sản phẩm.
+Hiển thị tất cả các sản phẩm và giá của chúng.
+Thoát chương trình.

@@ -1,0 +1,4 @@
+Viết một ứng dụng từ điển đơn giản: 
++Tạo  một mảng gồm các từ tiếng anh (vd: book, chair, pen, ruler…)
++Tạo một mảng gồm nghĩa tiếng việt tương ứng (vd: sách, ghế, bút, thước…)
++Khi người dùng nhập vào 1 từ tiếng anh thì trả ra nghĩa của từ tiếng Việt tương ứng. Trong trường hợp không có thì trả ra “không tìm thấy”.

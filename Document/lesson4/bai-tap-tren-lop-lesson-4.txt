@@ -1,0 +1,9 @@
+Ex1:
+Viết chương trình C# để kiểm tra ngày trong tuần dựa trên một số nhập từ người dùng. Sử dung switch case
+
+Ex2:
+Tạo 1 enum  Month chứa các tháng trong năm từ 1=> 12. Viết hàm nhận vào enum Month và Year và trả ra số ngày trong tháng (có xét đến năm nhuận)
+
+Ex3:
+Viết hàm cho phép nhập tên tuổi địa chỉ, bắt exception khi người dùng nhập tuổi không hợp lệ (giới hạn tuổi trong 1 khoảng nào đó) thì throw ra exception.
+Ngoài hàm main sử dụng try catch để bắt exception và hiển thị thông báo lỗi ra cửa sổ console
