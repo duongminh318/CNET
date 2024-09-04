@@ -1,0 +1,55 @@
+--tạo bảng Categories
+CREATE TABLE [Categories](
+	[CategoryId] [uniqueidentifier]PRIMARY KEY,
+	[CategoryName] [nvarchar](100) NOT NULL,
+	[Status] [tinyint] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL
+)
+GO
+
+--tạo bảng Products
+CREATE TABLE [Products](
+	[ProductId] [uniqueidentifier] primary key,
+	[ProductName] [nvarchar](100) NOT NULL,
+	[Price] [decimal](18, 0) NOT NULL,
+	[ManufactoringDate] [datetime] NULL,
+	[CreatedDate] [datetime] NOT NULL,
+	[Description] [nvarchar](1000) NULL,
+	[Status] [tinyint] NOT NULL,
+	[CategoryId] [uniqueidentifier] NULL,
+	[UserId] [uniqueidentifier] NULL,
+	[Quantity] [int] NOT NULL
+)
+
+--tạo bảng Users
+CREATE TABLE [Users](
+	[UserId] [uniqueidentifier] PRIMARY KEY,
+	[UserName] [nvarchar](50) NULL,
+	[Password] [nvarchar](50) NULL,
+	[Email] [nvarchar](50) NULL,
+	[Mobile] [nvarchar](50) NULL,
+	[Status] [tinyint] NOT NULL,
+	[CreatedDate] [datetime] NOT NULL
+)
+
+--Tạo khóa ngoại giữa Products và Categories
+
+ALTER TABLE [Products]  ADD  CONSTRAINT [FK_Products_Categories] FOREIGN KEY([CategoryId])
+REFERENCES [Categories] ([CategoryId])
+
+--Tạo khóa ngoại giữa Products và Users
+ALTER TABLE [Products]  ADD  CONSTRAINT [FK_Products_Users] FOREIGN KEY([UserId])
+REFERENCES [Users] ([UserId])
+
+
+
+
+
+
+
+
+
+
+
+
+
