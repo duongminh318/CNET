@@ -5,6 +5,7 @@
 # Truy Vấn
 - CRUD basic
 - 1 số hàm
+ + newid() --> tự gen ra 1 id ngẫu nhiên
  + getDate() --> ngày hiện tại
  + CAST(expression AS data_type) --> ép kiểu 
     - expression: Đây là giá trị hoặc cột mà bạn muốn chuyển đổi kiểu dữ liệu.
