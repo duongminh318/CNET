@@ -1,9 +1,10 @@
 # SQL Server
-- char(10) bắt buộc bắng 10
-- varchar(10) có thể <= 10
+- Data Type
+    + char(10) bắt buộc bắng 10
+    + varchar(10) có thể <= 10
 
 # Truy Vấn
-- CRUD basic
+- CRUD basic: create, select, insert, update, delete
 - 1 số hàm
  + getDate() --> ngày hiện tại
  + CAST(expression AS data_type) --> ép kiểu 
