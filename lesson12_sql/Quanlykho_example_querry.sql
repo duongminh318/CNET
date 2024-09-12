@@ -122,5 +122,42 @@ ON p.CategoryId = c.CategoryId
 inner join Users as u
 on p.UserId=u.UserId
 
+select *from Products
 -- lấy ra categoryId của bảng p đem ra so sánh với CategoryId của bảng c
 -- sau đó cái nào bằng nhau 
+
+
+
+-- update 
+update Categories
+set 
+    CategoryName = N'Smart TV',
+    Status = 2
+where 
+    CategoryId = 'B8AA2E2C-CDAF-4C83-B563-186951AE5D72'
+
+-- update nhiều điểu kiện
+go
+update Products 
+set Status = 2
+where Quantity >= 200 and Price >= 100000
+
+-- xoá
+go
+delete Products where ProductId = '508BC176-408A-4DE9-8172-2DE0CAF91E42'
+
+-- delete 1 cat là khoá ngoại của 1 product
+go
+delete Categories where CategoryId = 'CAB4B833-FD38-4F35-B827-26535F2C8E70'
+
+-- cascade --> xoá mất luôn ở cả 2 bảng
+-- setnull --> product sẽ có cat là null
+delete Categories where CategoryId = 'D4B6A885-9C76-4AFE-860F-B8CD0E9F9DF2'
+
+
+-- 1 sồ lệnh tìm kiếm
+select * from Products;
+-- có chứa từ %từ gì đó% thì in ra
+select * from Products where ProductName like '%h%';
+-- trong khoảng giá trị tứ x đến y
+select * from Products where Price between 100000 and 200000;
