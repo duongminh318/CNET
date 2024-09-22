@@ -14,6 +14,8 @@ namespace LearnEfCore
         void CreateProduct(CreateProductViewModel model);
         PaginationViewModel<ProductViewModel> GetProducts(ProductSearchModel model);
         PaginationViewModel<ProductViewModel> GetProductAndVariants(ProductSearchModel model);
+
+        PaginationViewModel<VariantDetailViewModel> GetVariants(VariantSearchModel model);
     }
     public class ProductService : IProductService
     {
@@ -93,6 +95,32 @@ namespace LearnEfCore
             }).ToList();
             return result;
 
+        }
+
+        public PaginationViewModel<VariantDetailViewModel> GetVariants(VariantSearchModel model)
+        {
+            var result = new PaginationViewModel<VariantDetailViewModel>();
+            var variants = _context.Variants.AsQueryable();
+            var products = _context.Products.AsQueryable();
+
+            var query = from p in products
+                        join v in variants
+                        on p.Id equals v.ProductId
+                        select new VariantDetailViewModel
+                        {
+                            Id = v.Id,
+                            Name = v.Name,
+                            Price = v.Price,
+                            Quantity = v.Quantity,
+                            CreatedDate = v.CreatedDate,
+                            Status = v.Status,
+                            DiscountPrice = v.DiscountPrice,
+                            ProductName = p.Name,
+
+                        };
+            result.Total = query.Count();
+            result.Data = query.Skip(model.SkipNo).Take(model.PageSize).ToList();
+            return result;
         }
 
     }
