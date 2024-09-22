@@ -1,2 +1,11 @@
-﻿<h1>Hello ASP .NET CORE MVC</h1>
-<h2> I Am Blog View</h2>
+﻿@using DemoApp.Models;
+@model BlogViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<p>@Model.Id</p>
+<h1>@Model.Name</h1>
+<div style="height: 200px">
+    <img src ="@Model.Image" />
+</div>
