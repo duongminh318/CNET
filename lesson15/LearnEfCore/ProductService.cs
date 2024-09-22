@@ -116,8 +116,32 @@ namespace LearnEfCore
                             Status = v.Status,
                             DiscountPrice = v.DiscountPrice,
                             ProductName = p.Name,
+                            ProductId = v.ProductId,
 
                         };
+            if (string.IsNullOrEmpty(model.Keyword))
+            {
+                query = query.Where(s => s.Name.Contains(model.Keyword));
+            }
+            if (model.ProductId.HasValue)
+            {
+                query = query.Where(s => s.ProductId == model.ProductId.Value);
+            }
+            if (model.FromDate.HasValue)
+            {
+                query = query.Where(s => s.CreatedDate >= model.FromDate.Value);
+            }
+
+            if (model.ToDate.HasValue)
+            {
+                query = query.Where(s => s.CreatedDate <= model.ToDate.Value);
+            }
+            if (model.Status.HasValue)
+            {
+
+                query = query.Where(s => s.Status == model.Status.Value);
+            }
+
             result.Total = query.Count();
             result.Data = query.Skip(model.SkipNo).Take(model.PageSize).ToList();
             return result;

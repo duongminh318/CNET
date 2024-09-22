@@ -8,6 +8,10 @@ namespace LearnEfCore.Models
 {
     public class VariantSearchModel : SearchModel
     {
+        public Guid? ProductId { get; set; }
+        public DateTime? FromDate { get; set; }
+        public DateTime? ToDate { get; set; }
+        public EntityStatus? Status { get; set; }
 
     }
 }
