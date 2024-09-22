@@ -7,7 +7,7 @@
 @foreach (var item in Model)
 {
     <div style="margin: 20px;">
-        <p>@item.Id</p>
+        <a href="/Home/BlogDetail?id=@item.Id"> <p>@item.Id</p></a>
         <h1>@item.Name</h1>
         <div>
             <img style="height: 100px; width: 100px;" src="@item.Image" />

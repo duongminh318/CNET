@@ -1,0 +1,14 @@
+﻿ @using DemoApp.Models;
+@model BlogViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div style="margin: 20px;">
+    <p>@Model.Id</p>
+    <h1>@Model.Name</h1>
+    <div>
+        <img style="height: 100px; width: 100px;" src="@Model.Image" />
+    </div>
+</div>

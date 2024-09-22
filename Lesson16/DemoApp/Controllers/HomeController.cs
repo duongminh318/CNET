@@ -60,6 +60,13 @@ namespace DemoApp.Controllers
             return View(_blogList);
         }
 
+        public IActionResult BlogDetail(Guid id)
+        {
+            var blog = _blogList.FirstOrDefault(s => s.Id == id);
+            return View(blog);
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
