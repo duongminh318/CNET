@@ -50,13 +50,14 @@ namespace DemoApp.Controllers
 
         public IActionResult Blog()
         {
-            var blog = new BlogViewModel
-            {
-                Id = Guid.NewGuid(),
-                Name = "Hướng dẫn lập trình",
-                Image = "https://media.istockphoto.com/id/1646501089/photo/closeup-group-of-asian-people-software-developers-using-computer-to-write-code-sitting-at.webp?a=1&b=1&s=612x612&w=0&k=20&c=7OC1ykUyXbgHImSLIevBvmwvbn6K7ys0JZAyvXqf2zQ="
-            };
-            return View(blog);
+            /* var blog = new BlogViewModel
+             {
+                 Id = Guid.NewGuid(),
+                 Name = "Hướng dẫn lập trình",
+                 Image = "https://media.istockphoto.com/id/1646501089/photo/closeup-group-of-asian-people-software-developers-using-computer-to-write-code-sitting-at.webp?a=1&b=1&s=612x612&w=0&k=20&c=7OC1ykUyXbgHImSLIevBvmwvbn6K7ys0JZAyvXqf2zQ="
+             };
+             return View(blog);*/
+            return View(_blogList);
         }
 
         public IActionResult Privacy()

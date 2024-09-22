@@ -1,11 +1,16 @@
 ﻿@using DemoApp.Models;
-@model BlogViewModel
+@model List<BlogViewModel>
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<p>@Model.Id</p>
-<h1>@Model.Name</h1>
-<div style="height: 200px">
-    <img src ="@Model.Image" />
-</div>
+@foreach (var item in Model)
+{
+    <div style="margin: 20px;">
+        <p>@item.Id</p>
+        <h1>@item.Name</h1>
+        <div>
+            <img style="height: 100px; width: 100px;" src="@item.Image" />
+        </div>
+    </div>
+}
