@@ -1,5 +1,6 @@
 ﻿using LearnEfCore.Entities;
 using LearnEfCore.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace LearnEfCore
     {
         void CreateProduct(CreateProductViewModel model);
         PaginationViewModel<ProductViewModel> GetProducts(ProductSearchModel model);
+        PaginationViewModel<ProductViewModel> GetProductAndVariants(ProductSearchModel model);
     }
     public class ProductService : IProductService
     {
@@ -31,6 +33,43 @@ namespace LearnEfCore
             product.CreatedDate = DateTime.Now;
             _context.Products.Add(product);
             _context.SaveChanges();
+        }
+
+        public PaginationViewModel<ProductViewModel> GetProductAndVariants(ProductSearchModel model)
+        {
+            var result = new PaginationViewModel<ProductViewModel>();
+            var query = _context.Products.Include(s => s.Variants).AsQueryable();
+            if (!string.IsNullOrEmpty(model.Keyword))
+            {
+                query = query.Where(s => s.Name.Contains(model.Keyword));
+            }
+            result.Total = query.Count();
+            query = query.Skip(model.SkipNo).Take(model.PageSize);
+            result.Total = query.Count();
+            query = query.Skip(model.SkipNo).Take(model.PageSize);
+            result.Data = query.Select(s => new ProductViewModel
+            {
+                Id = s.Id,
+                Name = s.Name,
+                Price = s.Price,
+                Quantity = s.Quantity,
+                CreatedDate = DateTime.Now,
+                Status = s.Status,
+                Variants = s.Variants.Select(v => new VariantViewModel
+                {
+                    Id = v.Id,
+                    Name = v.Name,
+                    Price = v.Price,
+                    Quantity = v.Quantity,
+                    CreatedDate = v.CreatedDate,
+                    Status = v.Status,
+                    DiscountPrice = v.DiscountPrice,
+
+                }).ToList()
+            }).ToList();
+            return result;
+
+
         }
 
         public PaginationViewModel<ProductViewModel> GetProducts(ProductSearchModel model)

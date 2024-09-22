@@ -10,6 +10,7 @@ namespace LearnEfCore.Entities
     public class AppDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Variant> Variants { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=MAYTINH;Database=learnEF;User Id=sa;Password=dminh318@;MultipleActiveResultSets=True;TrustServerCertificate=True;");

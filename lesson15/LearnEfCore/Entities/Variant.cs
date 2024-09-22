@@ -7,16 +7,22 @@ using System.Threading.Tasks;
 
 namespace LearnEfCore.Entities
 {
-    [Table("Products")]
-    public class Product : BaseEntity<Guid>
+    [Table("Variants")]
+    public class Variant : BaseEntity<Guid>
     {
         [Column(TypeName = "nvarchar(1000)")]
         public string Name { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
+
+        [Column(TypeName = "decimal(18,2)")]
+        public decimal? DiscountPrice { get; set; }
         public int Quantity { get; set; }
 
-        public ICollection<Variant> Variants { get; set; }
+        [ForeignKey(nameof(ProductId))]
+        public Product Product { get; set; }
+        public Guid ProductId { get; set; }
+
     }
 }
