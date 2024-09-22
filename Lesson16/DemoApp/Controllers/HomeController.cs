@@ -22,10 +22,23 @@ namespace DemoApp.Controllers
         {
             return View();
         }
+       /* public IActionResult Blog()
+        {
+            return View();
+        }*/
+
         public IActionResult Blog()
         {
             return View();
+            var blog = new BlogViewModel
+            {
+                Id = Guid.NewGuid(),
+                Name = "Hý?ng d?n l?p tr?nh",
+                Image = "https://media.istockphoto.com/id/1646501089/photo/closeup-group-of-asian-people-software-developers-using-computer-to-write-code-sitting-at.webp?a=1&b=1&s=612x612&w=0&k=20&c=7OC1ykUyXbgHImSLIevBvmwvbn6K7ys0JZAyvXqf2zQ="
+            };
+            return View(blog);
         }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
