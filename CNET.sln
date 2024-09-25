@@ -51,11 +51,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson17", "Lesson17", "{BA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnDI", "Lesson17\LearnDI\LearnDI.csproj", "{E522BA86-593D-44E4-B023-CC072E009040}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{473CF6F1-3063-44BA-BF66-A1607C9CCF9E}"
-	ProjectSection(SolutionItems) = preProject
-		ServiceA.cs = ServiceA.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,7 +138,6 @@ Global
 		{F080F341-869B-4150-83DD-45E032B390C3} = {C2B3F695-67C9-4E3D-9AF5-B71B8F033519}
 		{A237BAF9-E328-47F0-8539-541B411661C5} = {7BC196F6-F1A5-491A-BAE1-A1E61A5EA315}
 		{E522BA86-593D-44E4-B023-CC072E009040} = {BAD15F4C-8B99-4880-976D-3C4F380097D5}
-		{473CF6F1-3063-44BA-BF66-A1607C9CCF9E} = {BAD15F4C-8B99-4880-976D-3C4F380097D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D8AE9743-16E7-480F-819E-3A1374F4CBA5}
