@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DemoApp.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace DemoApp.Controllers
 {
@@ -12,5 +13,13 @@ namespace DemoApp.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Create(CreateStudentViewModel model)
+        {
+
+            return View();
+        }
+
     }
 }
