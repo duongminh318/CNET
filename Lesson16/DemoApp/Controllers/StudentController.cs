@@ -9,16 +9,25 @@ namespace DemoApp.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(CreateStudentViewModel model)
         {
 
+            if (ModelState.IsValid)
+            {
+                return Json(model);
+            }
+            return View(model);
+
             return View();
+
         }
 
     }
