@@ -1,8 +1,19 @@
 ﻿using System;
 
-public class Class1
+public interface IServiceA
 {
-	public Class1()
+	string GetId();
+}
+
+public class ServiceA:IServiceA
+{
+	private readonly Guid _id;
+	public ServiceA()
 	{
+		_id = Guid.NewGuid();
+	}
+	public string GetId()
+	{
+		return _id.ToString();
 	}
 }
