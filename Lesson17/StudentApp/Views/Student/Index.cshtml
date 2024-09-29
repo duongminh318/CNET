@@ -1,0 +1,42 @@
+﻿
+
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using StudentApp.Students
+@model List<StudentViewModel>
+
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h1 class="bg-info text-white">Students</h1>
+<a href="/Student/Create" class="btn btn-secondary">Create a Student</a>
+
+<table class="table table-sm table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Score</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var Student in Model)
+    {
+        <tr>
+            <td>@Student.Id</td>
+            <td>@Student.Name</td>
+            <td>@Student.Score</td>
+            <td>
+                <a class="btn btn-sm btn-primary" href="/Student/Update?id=@Student.Id">
+                    Update
+                </a>
+            </td>
+            <td>
+                <form action="/Student/Delete?id=@Student.Id" method="post">
+                    <button type="submit" class="btn btn-sm btn-danger">
+                        Delete
+                    </button>
+                </form>
+            </td>
+        </tr>
+    }
+</table>
