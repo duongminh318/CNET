@@ -1,6 +1,6 @@
 ﻿namespace StudentApp.Students
 {
-    public class StudentViewModel
+    public class UpdateStudentViewModel
     {
         public Guid Id { get; set; }
         public string Name { get; set; }

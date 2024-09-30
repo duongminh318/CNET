@@ -260,3 +260,45 @@ tránh trường hợp update vào thẳng vào cái chính
 # Clean Code
 - folder Abstract chứa các Generic InterFace
 - folder Helpers : các hàm hỗ trợ như Validate....
+
+
+# Lập trình bất đồng bộ
+## KHÁI NIỆM
+- a) Đồng bộ:
+Ứng dụng console tính toán hoặc xử lý dữ liệu đơn giản.
+Xử lý các tác vụ nhỏ không gây ra chờ đợi
+	 (ví dụ: tính toán toán học, truy xuất dữ liệu bộ nhớ).
+b) Bất đồng bộ:
+Ứng dụng web xử lý nhiều yêu cầu từ người dùng và thực hiện các tác
+	vụ như truy vấn cơ sở dữ liệu.
+Ứng dụng giao diện người dùng (UI) khi bạn cần đảm bảo người 
+	 dùng vẫn có thể tương tác với giao diện trong khi chờ dữ liệu từ API hoặc đọc/ghi file.
+- lập trình bất đồng bộ có thể được hình dung giống như chạy tiếp sức.
+Mỗi tác vụ bất đồng bộ giống như một vận động viên trong đội chạy
+tiếp sức. Mỗi người chỉ chạy khi đã nhận được que tiếp sức từ người
+chạy trước, và đến lượt mình, họ sẽ đưa que tiếp sức cho người tiếp theo.
+
+Trong lập trình bất đồng bộ:
+
+Khi một tác vụ (Task) đang chờ một việc gì đó hoàn thành (ví dụ: đọc dữ liệu từ cơ sở dữ liệu, chờ phản hồi từ API), nó không chiếm giữ tài nguyên mà có thể "tạm nghỉ" và chờ kết quả.
+Khi kết quả đã sẵn sàng, nó tiếp tục chạy và trả kết quả cho tác vụ tiếp theo, giống như người chạy nhận que tiếp sức và chạy tiếp.
+Cách này giúp hệ thống không bị lãng phí tài nguyên khi chờ đợi và có thể làm những việc khác trong lúc chờ đợi, làm tăng hiệu suất chung. Đây là điểm mạnh của lập trình bất đồng bộ so với lập trình đồng bộ truyền thống, nơi mà một nhiệm vụ phải đợi xong trước khi tiếp tục nhiệm vụ tiếp theo.
+
+Cơ chế này giúp ứng dụng có thể phục vụ nhiều yêu cầu hơn mà không bị "nghẽn" bởi những tác vụ dài hạn, như truy cập cơ sở dữ liệu hoặc gọi API từ bên ngoài.
+
+Anh có thể tưởng tượng thêm, mỗi tác vụ không cần phải đứng đợi ở đó mà có thể đi làm việc khác, khi que tiếp sức (kết quả) tới thì lập tức quay lại chạy tiếp.
+- async: Được đặt trước một phương thức để chỉ ra rằng phương thức 
+	- này thực hiện bất đồng bộ.
+- Task<string>: Cho biết rằng phương thức trả về một tác vụ 
+	- (task) có kết quả là một chuỗi (string).
+- await: Sử dụng để chờ một tác vụ hoàn thành mà không chặn luồng
+	- chính. Khi gặp await, luồng chính có thể thực hiện những tác vụ khác cho đến khi tác vụ chờ hoàn thành.
+
+
+## Mối quan hệ giữa Repository và Unit of Work
+Repository chịu trách nhiệm cung cấp các thao tác CRUD cơ bản cho 
+- một thực thể (Entity) cụ thể (ví dụ như Product, Category,...).
+Unit of Work kết hợp các repository khác nhau và đảm bảo rằng tất 
+- cả các thay đổi trong phiên làm việc sẽ được thực hiện trong một 
+- giao dịch (transaction). Nếu có lỗi xảy ra, Unit of Work sẽ rollback 
+- tất cả các thay đổi để bảo toàn tính nhất quán của dữ liệu.
