@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model BookApp.Services.Authors.UpdateAuthorViewModel
+
+@{
+    ViewData["Title"] = "Update a Author";
+}
+
+<h1 class="bg-info text-white">Update a Author</h1>
+<a asp-action="Index" class="btn btn-secondary">View all Authors</a>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form method="post" action="/Author/Update">
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input type="text" asp-for="Id" readonly class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
