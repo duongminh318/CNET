@@ -1,4 +1,6 @@
 ﻿using BookApp.Repositories;
+using BookApp.Services.Authors;
+using BookApp.Services.Books;
 using BookApp.UnitOfWork;
 using Ex1RepositoryUOW.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -18,10 +20,10 @@ namespace BookApp.Dependencies
             services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
         }
 
-        //public static void AddServices(this IServiceCollection services)
-        //{
-        //    services.AddScoped<IAuthorService, AuthorService>();
-        //    services.AddScoped<IBookService, BookService>();
-        //}
+        public static void AddServices(this IServiceCollection services)
+        {
+            services.AddScoped<IAuthorService, AuthorService>();
+            services.AddScoped<IBookService, BookService>();
+        }
     }
 }

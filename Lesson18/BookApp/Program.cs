@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddRepositoryUOW();
-
+builder.Services.AddServices();
 
 var app = builder.Build();
 
