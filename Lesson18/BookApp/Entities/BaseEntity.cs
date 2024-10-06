@@ -2,7 +2,7 @@
 
 namespace Ex1GenericRepositoryUOW.Entities
 {
-    public class BaseEntity <TKey>
+    public abstract class BaseEntity <TKey>
     {
         [Key]
         public TKey Id { get; set; }

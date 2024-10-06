@@ -1,7 +1,12 @@
+using BookApp.Dependencies;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDatabase(builder.Configuration);
+builder.Services.AddRepositoryUOW();
+
 
 var app = builder.Build();
 
