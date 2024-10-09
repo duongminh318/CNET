@@ -3,9 +3,12 @@
 @model List<BookApp.Services.Authors.AuthorViewModel>
 
 @{
-    ViewData["Title"] = "Authors";
+    var message = TempData["Error"] != null ? (string)TempData["Error"] : string.Empty;
 }
-
+@if (!string.IsNullOrEmpty(message))
+{
+    <p>@message</p>
+}
 <h1 class="bg-info text-white">Authors</h1>
 <a href="/Author/Create" class="btn btn-secondary">Create a Author</a>
 
@@ -31,7 +34,7 @@
 
 
             </td>
-          
+
             <td>
                 <a class="btn btn-sm btn-primary" href="/Author/Update?id=@item.Id">
                     Update
