@@ -302,3 +302,17 @@ Unit of Work kết hợp các repository khác nhau và đảm bảo rằng tấ
 - cả các thay đổi trong phiên làm việc sẽ được thực hiện trong một 
 - giao dịch (transaction). Nếu có lỗi xảy ra, Unit of Work sẽ rollback 
 - tất cả các thay đổi để bảo toàn tính nhất quán của dữ liệu.
+
+# IDENTITY  (phân quyền, xác thực)
+- Authentication
+Để vào được hệ thống  => login 
+Authorization (role: vai trò)
+Vào 1 hệ thống  => vùng em được truy cập, ko được truy cập
+
+giám đốc => vào được tất cả các phần quản lý
+nhân viên => vào được hệ thống  => phần quản lý tài liệu về vật tư 
+chứng thực và 
+phân quyền rolebase authorization => hỗ trợ sẵn của identity
+vào project => permission authentication => tự viết phần này => ko được hỗ trợ
+
+
