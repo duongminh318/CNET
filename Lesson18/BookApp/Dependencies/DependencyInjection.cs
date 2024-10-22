@@ -33,7 +33,7 @@ namespace BookApp.Dependencies
             service.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(option =>
                 {
-                    option.LoginPath = $"/Account/Login";
+                    option.LoginPath = "/Account/Login";
                     option.AccessDeniedPath = "/Account/AccessDenied";
                     option.Cookie.HttpOnly = true;
                 });
