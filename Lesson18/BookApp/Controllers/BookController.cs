@@ -1,11 +1,13 @@
 ﻿using BookApp.Controllers;
 using BookApp.Services.Authors;
 using BookApp.Services.Books;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace Ex1RepositoryUOW.Controllers
 {
+    [Authorize]
     public class BookController : Controller
     {
         private readonly IBookService _bookService;

@@ -1,8 +1,10 @@
 ﻿using BookApp.Services.Authors;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookApp.Controllers
 {
+    [Authorize]
     public class AuthorController : Controller
     {
         private readonly IAuthorService _authorService;
