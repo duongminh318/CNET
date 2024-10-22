@@ -1,5 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using BookApp.Services.Accounts;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OutputCaching;
+
 
 namespace BookApp.Controllers
 {
@@ -21,6 +24,28 @@ namespace BookApp.Controllers
         {
             return View();
         }
+
+        public IActionResult CreateRole()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> CreateRole(CreateRoleViewModel model)
+        {
+            var role = new IdentityRole();
+            role.Name = model.RoleName;
+            var result = await _roleManager.CreateAsync(role);
+            if (result.Succeeded)
+            {
+                return Redirect("/");
+            }
+            else
+            {
+                return RedirectToAction("Error", "Home");
+            }
+
+        }
+
     }
 
 }
