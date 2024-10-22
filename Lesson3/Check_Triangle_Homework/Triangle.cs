@@ -10,6 +10,7 @@ namespace Check_Triangle_Homework
     {
         /* static string CheckTriangle(double a, double b, double c)
          {
+         //demo
              // Kiểm tra xem ba cạnh a, b, c có tạo thành tam giác hay không
              if (a + b <= c || a + c <= b || b + c <= a)
              {
