@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 namespace Ex1RepositoryUOW.Controllers
 {
     [Authorize]
+    [Authorize(Roles = "Admin")]
     public class BookController : Controller
     {
         private readonly IBookService _bookService;
