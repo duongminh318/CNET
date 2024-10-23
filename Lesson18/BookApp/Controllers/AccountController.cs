@@ -53,6 +53,32 @@ namespace BookApp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> CreateUser(CreateUserViewModel model)
+        {
+            var user = new IdentityUser
+            {
+                Email = model.Email,
+                UserName = model.UserName
+            };
+            var result = await _userManager.CreateAsync(user, model.Password);
+
+            if (result.Succeeded)
+            {
+                var role = await _roleManager.Roles.FirstOrDefaultAsync(s => s.Id == model.RoleId);
+                if (role == null)
+                {
+                    return RedirectToAction("Error", "Home");
+                }
+
+                var addRoleResult = await _userManager.AddToRoleAsync(user, role.Name);
+                if (addRoleResult.Succeeded)
+                {
+                    return Redirect("/");
+                }
+            }
+            return RedirectToAction("Error", "Home");
+        }
 
 
     }
