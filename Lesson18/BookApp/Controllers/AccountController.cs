@@ -81,6 +81,28 @@ namespace BookApp.Controllers
         }
 
 
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            var user = await _userManager.FindByEmailAsync(model.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError(string.Empty, $"user {model.Email} is not found");
+                return View(model);
+            }
+
+            var result = await _signInManager.PasswordSignInAsync(user, model.Password, model.RememberMe, false);
+
+            if (result.Succeeded)
+            {
+                return Redirect("/");
+            }
+
+            ModelState.AddModelError(string.Empty, "password is not correct");
+            return View(model);
+        }
+
+
     }
 
 }
