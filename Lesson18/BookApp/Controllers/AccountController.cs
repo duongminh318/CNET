@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace BookApp.Controllers
@@ -45,6 +46,14 @@ namespace BookApp.Controllers
             }
 
         }
+        public async Task<IActionResult> CreateUser()
+        {
+            var roles = await _roleManager.Roles.ToListAsync();
+            ViewBag.Roles = roles;
+            return View();
+        }
+
+
 
     }
 
