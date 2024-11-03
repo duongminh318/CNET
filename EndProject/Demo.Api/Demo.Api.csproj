@@ -8,6 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+
   </ItemGroup>
 
   <ItemGroup>
