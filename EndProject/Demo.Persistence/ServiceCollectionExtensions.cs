@@ -1,4 +1,5 @@
 ﻿using Demo.Domain.Entities;
+using Demo.Domain;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -35,5 +36,13 @@ public static class ServiceCollectionExtensions
             options.Password.RequiredUniqueChars = 1;
             options.Lockout.AllowedForNewUsers = true;
         });
+
+
     }
+    public static void AddRepositoryUnitOfWork(this IServiceCollection services)
+    {
+        services.AddScoped(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+        services.AddScoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>));
+    }
+
 }
