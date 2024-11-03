@@ -1,3 +1,4 @@
+using Demo.Api.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Demo.Api.Controllers
@@ -17,7 +18,7 @@ namespace Demo.Api.Controllers
         {
             _logger = logger;
         }
-
+        [ApplicationAuthorize]
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
