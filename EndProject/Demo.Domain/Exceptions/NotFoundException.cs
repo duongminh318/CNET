@@ -7,6 +7,6 @@ public abstract class NotFoundException : BaseException
     protected NotFoundException(string message)
         : base("Not Found", message)
     {
-        StatusCode = StatusCodes.Status400BadRequest;
+        StatusCode = StatusCodes.Status404NotFound;
     }
 }
