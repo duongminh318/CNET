@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Demo.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241103090033_initdb")]
+    [Migration("20241103091706_initdb")]
     partial class initdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -506,9 +506,6 @@ namespace Demo.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<Guid?>("AppRoleId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
 
@@ -519,8 +516,6 @@ namespace Demo.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AppRoleId");
 
                     b.HasIndex("RoleId");
 
@@ -535,9 +530,6 @@ namespace Demo.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<Guid?>("AppUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
 
@@ -548,8 +540,6 @@ namespace Demo.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("AppUserId");
 
                     b.HasIndex("UserId");
 
@@ -564,9 +554,6 @@ namespace Demo.Persistence.Migrations
                     b.Property<string>("ProviderKey")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid?>("AppUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
 
@@ -574,8 +561,6 @@ namespace Demo.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("LoginProvider", "ProviderKey");
-
-                    b.HasIndex("AppUserId");
 
                     b.HasIndex("UserId");
 
@@ -590,17 +575,7 @@ namespace Demo.Persistence.Migrations
                     b.Property<Guid>("RoleId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid?>("AppRoleId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("AppUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.HasKey("UserId", "RoleId");
-
-                    b.HasIndex("AppRoleId");
-
-                    b.HasIndex("AppUserId");
 
                     b.HasIndex("RoleId");
 
@@ -618,15 +593,10 @@ namespace Demo.Persistence.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid?>("AppUserId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("UserId", "LoginProvider", "Name");
-
-                    b.HasIndex("AppUserId");
 
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
@@ -678,10 +648,6 @@ namespace Demo.Persistence.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("Demo.Domain.Entities.AppRole", null)
-                        .WithMany("Claims")
-                        .HasForeignKey("AppRoleId");
-
-                    b.HasOne("Demo.Domain.Entities.AppRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -690,10 +656,6 @@ namespace Demo.Persistence.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<System.Guid>", b =>
                 {
-                    b.HasOne("Demo.Domain.Entities.AppUser", null)
-                        .WithMany("Claims")
-                        .HasForeignKey("AppUserId");
-
                     b.HasOne("Demo.Domain.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
@@ -704,10 +666,6 @@ namespace Demo.Persistence.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<System.Guid>", b =>
                 {
                     b.HasOne("Demo.Domain.Entities.AppUser", null)
-                        .WithMany("Logins")
-                        .HasForeignKey("AppUserId");
-
-                    b.HasOne("Demo.Domain.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -716,14 +674,6 @@ namespace Demo.Persistence.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<System.Guid>", b =>
                 {
-                    b.HasOne("Demo.Domain.Entities.AppRole", null)
-                        .WithMany("UserRoles")
-                        .HasForeignKey("AppRoleId");
-
-                    b.HasOne("Demo.Domain.Entities.AppUser", null)
-                        .WithMany("UserRoles")
-                        .HasForeignKey("AppUserId");
-
                     b.HasOne("Demo.Domain.Entities.AppRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
@@ -740,32 +690,10 @@ namespace Demo.Persistence.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<System.Guid>", b =>
                 {
                     b.HasOne("Demo.Domain.Entities.AppUser", null)
-                        .WithMany("Tokens")
-                        .HasForeignKey("AppUserId");
-
-                    b.HasOne("Demo.Domain.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Demo.Domain.Entities.AppRole", b =>
-                {
-                    b.Navigation("Claims");
-
-                    b.Navigation("UserRoles");
-                });
-
-            modelBuilder.Entity("Demo.Domain.Entities.AppUser", b =>
-                {
-                    b.Navigation("Claims");
-
-                    b.Navigation("Logins");
-
-                    b.Navigation("Tokens");
-
-                    b.Navigation("UserRoles");
                 });
 
             modelBuilder.Entity("Demo.Domain.Entities.Category", b =>
