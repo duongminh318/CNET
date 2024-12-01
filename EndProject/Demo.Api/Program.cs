@@ -21,6 +21,7 @@ builder.Services.AddRepositoryUnitOfWork();
 builder.Services.AddServicesApplication();
 //service of infrastructure
 builder.Services.AddServicesInfrastructure();
+builder.Services.AddOptionsInfrastructure(builder.Configuration);
 //service of Api
 builder.Services.AddJwtAuthentication(builder.Configuration);
 
