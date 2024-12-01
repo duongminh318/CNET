@@ -14,10 +14,11 @@ public class JwtTokenService : IJwtTokenService
 {
 
     private readonly IOptions<JwtOption> _jwtOption;
-
+    private readonly IConfiguration _configuration;
     public JwtTokenService(IConfiguration configuration, IOptions<JwtOption> jwtOption)
     {
         _jwtOption = jwtOption;
+        _configuration = configuration;
     }
     public string GenerateAccessToken(IEnumerable<Claim> claims)
     {
@@ -25,6 +26,7 @@ public class JwtTokenService : IJwtTokenService
         var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
         var tokeOptions = new JwtSecurityToken(
+            //issuer: _configuration["JwtOption:Issuer"],
             issuer: _jwtOption.Value.Issuer,
             audience: _jwtOption.Value.Audience,
             claims: claims,

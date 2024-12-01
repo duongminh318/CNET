@@ -14,6 +14,7 @@ namespace Demo.Application.Services
 {
     public class UserService : IUserService
     {
+
         private readonly UserManager<AppUser> _userManager;
         private readonly RoleManager<AppRole> _roleManager;
         private readonly IGenericRepository<Permission, Guid> _permissionRepository;
