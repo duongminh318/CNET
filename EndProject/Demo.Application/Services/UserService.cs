@@ -437,7 +437,7 @@ namespace Demo.Application.Services
                         {
                             Id = Guid.NewGuid(),
                             Code = CommonConstants.Permissions.DELETE_ROLE_PERMISSION,
-                            Name = CommonConstants.Permissions.ROLE_PERMISSION,
+                            Name = CommonConstants.Permissions.DELETE_ROLE_PERMISSION,
                             ParentCode = CommonConstants.Permissions.ROLE_PERMISSION,
                             Index = 5
                         }
@@ -711,7 +711,7 @@ namespace Demo.Application.Services
                     }
                     catch (Exception e)
                     {
-                        await _unitOfWork.BeginTransactionAsync();
+                        await _unitOfWork.RollbackAsync();
                         assignPermissionResult = false;
                     }
 
