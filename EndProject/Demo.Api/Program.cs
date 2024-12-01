@@ -3,6 +3,7 @@ using Demo.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Demo.Application;
 using Demo.Infrastructure;
+using Demo.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +21,8 @@ builder.Services.AddRepositoryUnitOfWork();
 builder.Services.AddServicesApplication();
 //service of infrastructure
 builder.Services.AddServicesInfrastructure();
+//service of Api
+builder.Services.AddJwtAuthentication(builder.Configuration);
 
 var app = builder.Build();
 
@@ -32,6 +35,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
