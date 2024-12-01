@@ -3,6 +3,7 @@ using Demo.Domain.ApplicationServices.Users;
 using Demo.Domain.Entities;
 using Demo.Domain.Exceptions;
 using Demo.Domain.InfrastructureServices;
+using Demo.Domain.Utility;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
