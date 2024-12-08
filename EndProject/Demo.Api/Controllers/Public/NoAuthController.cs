@@ -1,4 +1,5 @@
-﻿using Demo.Domain;
+﻿using Demo.Api.Filters;
+using Demo.Domain;
 using Demo.Domain.ApplicationServices.Users;
 using DemoApp.Api.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +21,7 @@ namespace Demo.Api.Controllers.Public
             return result;
         }
 
+        [ApplicationAuthorize]
         [HttpPost]
         [Route("register-customer")]
         public async Task<ResponseResult> RegisterCustomer([FromBody] RegisterUserViewModel model)
@@ -27,6 +29,5 @@ namespace Demo.Api.Controllers.Public
             var result = await _userService.RegisterCustomer(model);
             return result;
         }
-
     }
 }
