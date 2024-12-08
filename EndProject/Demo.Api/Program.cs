@@ -6,7 +6,6 @@ using Demo.Infrastructure;
 using Demo.Api;
 
 var builder = WebApplication.CreateBuilder(args);
-
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -28,6 +27,7 @@ builder.Services.AddJwtAuthentication(builder.Configuration);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseExceptionHandlingMiddleware();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -35,7 +35,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseMiddleware<TestMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 
