@@ -22,8 +22,6 @@ namespace Demo.Api.Controllers.Public
             return result;
         }
 
-        [ApplicationAuthorize]
-        [Permission(CommonConstants.Permissions.ADD_USER_PERMISSION)]
         [HttpPost]
         [Route("register-customer")]
         public async Task<ResponseResult> RegisterCustomer([FromBody] RegisterUserViewModel model)
@@ -31,6 +29,5 @@ namespace Demo.Api.Controllers.Public
             var result = await _userService.RegisterCustomer(model);
             return result;
         }
-
     }
 }
