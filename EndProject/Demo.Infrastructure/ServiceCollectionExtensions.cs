@@ -10,6 +10,7 @@ public static class ServiceCollectionExtensions
     public static void AddServicesInfrastructure(this IServiceCollection services)
     {
         services.AddScoped<IJwtTokenService, JwtTokenService>();
+        services.AddScoped<IFileService, FileService>();
 
     }
 

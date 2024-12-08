@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -21,6 +21,10 @@
     <ProjectReference Include="..\Demo.Domain\Demo.Domain.csproj" />
     <ProjectReference Include="..\Demo.Infrastructure\Demo.Infrastructure.csproj" />
     <ProjectReference Include="..\Demo.Persistence\Demo.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

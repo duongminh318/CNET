@@ -35,6 +35,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseStaticFiles();
 app.UseMiddleware<TestMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
