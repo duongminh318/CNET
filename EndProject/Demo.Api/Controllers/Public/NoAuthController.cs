@@ -31,5 +31,6 @@ namespace Demo.Api.Controllers.Public
             var result = await _userService.RegisterCustomer(model);
             return result;
         }
+
     }
 }
