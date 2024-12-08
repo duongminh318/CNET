@@ -18,6 +18,7 @@ namespace Demo.Api.Controllers.Public
         [Route("login")]
         public async Task<AuthorizedResponseModel> Login([FromBody] LoginViewModel model)
         {
+            //throw new Exception();
             var result = await _userService.Login(model);
             return result;
         }
