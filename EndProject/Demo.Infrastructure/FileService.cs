@@ -28,9 +28,9 @@ namespace Demo.Infrastructure
             return new FileInfoModel(file.FileName, filePath);
         }
 
-        public void Delete(string imageUrl)
+        public void Delete(string url)
         {
-            string filePath = Path.Combine(_webRootFolder, imageUrl);
+            string filePath = Path.Combine(_webRootFolder, url);
             if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException(filePath);
