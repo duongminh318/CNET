@@ -1,6 +1,7 @@
 ﻿using Demo.Api.Filters;
 using Demo.Domain;
 using Demo.Domain.ApplicationServices.Users;
+using Demo.Domain.Utility;
 using DemoApp.Api.Controllers.Base;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,6 +23,7 @@ namespace Demo.Api.Controllers.Public
         }
 
         [ApplicationAuthorize]
+        [Permission(CommonConstants.Permissions.ADD_USER_PERMISSION)]
         [HttpPost]
         [Route("register-customer")]
         public async Task<ResponseResult> RegisterCustomer([FromBody] RegisterUserViewModel model)
