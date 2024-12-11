@@ -1,4 +1,4 @@
-﻿namespace DemoApp.Infrastructure.DependencyInjection;
+﻿namespace Demo.Infrastructure;
 
 public class JwtOption
 {

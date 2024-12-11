@@ -1,4 +1,4 @@
-﻿namespace DemoApp.Domain.Models.Commons
+﻿namespace Demo.Domain
 {
     public class SearchQuery
     {
