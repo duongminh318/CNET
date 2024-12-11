@@ -22,7 +22,8 @@ namespace Demo.Infrastructure
                 Directory.CreateDirectory(directory);
             }
             var fileName = $"{Guid.NewGuid()}-{file.FileName}";
-            var filePath = $"/{folderName}/{fileName}";
+            //  var filePath = $"/{folderName}/{fileName}";
+            var filePath = $"{folderName}/{fileName}";
             await using var stream = new FileStream(Path.Combine(directory, fileName), FileMode.Create);
             await file.CopyToAsync(stream);
             return new FileInfoModel(file.FileName, filePath);
