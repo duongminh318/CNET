@@ -1,5 +1,6 @@
 ﻿using Demo.Domain;
 using Demo.Domain.ApplicationServices.Categories;
+using Demo.Domain.ApplicationServices.Images;
 using Demo.Domain.ApplicationServices.Users;
 using Demo.Domain.Entities;
 using Demo.Domain.Enums;
@@ -8,6 +9,7 @@ using Demo.Domain.Utility;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace Demo.Application.Services;
 
@@ -62,10 +64,10 @@ public class CategoryService : ICategoryService
             throw new CategoryException.CategoryNotFoundException(model.CategoryId);
         }
 
-        var listImage = await _generalImageRepository
-            .FindAll(s => model.ImageIds
-                .Contains(s.Id)).Select(s => s.Url).ToListAsync();
-
+        var listImage = await _generalImageRepository.FindAll(s => model.ImageIds.Contains(s.Id))
+                .Select(s => new ImageInEntity(s.Id, s.Name, s.Url))
+                .ToListAsync();
+        category.ImageJson = JsonConvert.SerializeObject(listImage);
 
         category.Name = model.CategoryName;
         try
